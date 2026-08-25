@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{background:#FBFAF7;color:#16262B;margin:0}html{color-scheme:light}footer [data-flinks]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 26px}@media (max-width:699px){footer [data-fbrand]{display:none}footer [data-flinks]{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}[data-vrow]{grid-template-columns:minmax(0,1fr)!important;gap:4px}}html.om-hold body{opacity:0}html.om-in body{opacity:1;transition:opacity .26s cubic-bezier(.22,.61,.24,1)}@media (prefers-reduced-motion:reduce){html.om-in body{transition:none}}</style>
+<script>(function(){var h=document.documentElement;h.className+=" om-hold";var done=0,mo,cap;function go(){if(done)return;done=1;clearTimeout(cap);if(mo)mo.disconnect();h.className=h.className.replace(" om-hold","")+" om-in";}function ready(){var r=document.getElementById("dc-root");return r&&r.getBoundingClientRect().height>240;}function check(){if(ready())requestAnimationFrame(go);}cap=setTimeout(go,1500);document.addEventListener("DOMContentLoaded",function(){try{mo=new MutationObserver(check);mo.observe(document.body,{childList:true,subtree:true});}catch(e){}check();});})();</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Beacon Star Senior Living is the Foundation’s flagship project: a Pure Land home where practice and care are one, for monastics and for lay devotees with no one to care for them, in the last stage of life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Alegreya+Sans:wght@400;500;700&amp;display=fallback" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:21px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#FBFAF7;color:#16262B;font-family:"Alegreya Sans","Helvetica Neue","PingFang TC","Microsoft JhengHei",-apple-system,"Helvetica Neue",sans-serif;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;text-spacing-trim:trim-start}
+img{max-width:100%;display:block}
+a{color:#04474F;text-decoration:none}
+a:hover{color:#03323A}
+[id]{scroll-margin-top:calc(var(--hdr, 132px) + 24px)}
+:focus-visible{outline:3px solid #8A6A00;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<div style="display:flex;flex-direction:column">
+
+<header style="background:#FBFAF7;border-bottom:1px solid rgba(4,71,79,.18)">
+  <div data-util="lang" style="display:none;background:#03323A">
+    <div role="group" aria-label="語言 Language" style="max-width:1140px;margin:0 auto;padding:0 20px;min-height:40px;display:flex;align-items:center;justify-content:flex-end;gap:2px">
+      <a href="./養心院.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">繁體</a>
+      <a href="./养心院.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">简体</a>
+      <a lang="en" href="./Senior-Living.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.7rem;letter-spacing:.03em;color:#fff;background:rgba(255,255,255,.14)" aria-current="page">English</a>
+    </div>
+  </div>
+  <div style="max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:10px 24px;flex-wrap:wrap;justify-content:space-between">
+    <a href="./Beacon-Star-Foundation.dc.html" style="display:flex;align-items:center;gap:14px;flex-shrink:0;min-height:44px">
+      <img src="./logo.png" alt="Beacon Star Foundation logo" style="width:52px;height:52px">
+      <span>
+        <span style="display:block;font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F;line-height:1.3">Beacon Star Foundation</span>
+        <span lang="zh-Hant" style="display:block;font-size:.6rem;letter-spacing:.18em;color:#2F6B72;line-height:1.5">星星之火基金會</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation" style="display:flex;align-items:center;justify-content:flex-end;gap:2px 20px;flex-wrap:wrap">
+      <a href="./Beacon-Star-Foundation.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Home</a>
+      <div data-nav-group="" style="position:relative;display:flex;align-items:center">
+        <button type="button" onClick="{{ toggleAbout }}" aria-expanded="{{ aboutExpanded }}" style="display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 14px;font-family:inherit;font-size:.9rem;color:#16262B;background:transparent;border:none;border-bottom:3px solid transparent;cursor:pointer;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">About<span aria-hidden="true" style="font-size:.5rem;line-height:1;color:#2F6B72">▼</span></button>
+        <div style="display:{{ aboutDisplay }};position:absolute;top:100%;left:0;min-width:190px;z-index:70;background:#FBFAF7;border:1px solid rgba(4,71,79,.22);box-shadow:0 12px 28px rgba(4,71,79,.1)">
+          <a href="./Our-Origin.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B" style-hover="background:#F3EFE7;color:#04474F">Our Origin</a>
+          <a href="./Our-Team.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B;border-top:1px solid rgba(4,71,79,.12)" style-hover="background:#F3EFE7;color:#04474F">Our Team</a>
+        </div>
+      </div>
+      <a data-current="" href="./Senior-Living.dc.html" aria-current="page" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C">Senior Living</a>
+      <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Donate</a>
+      <a href="./Beacon-Star-Foundation.dc.html#contact" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap">
+      <div role="group" aria-label="語言 Language" style="display:flex;border:1px solid rgba(4,71,79,.28)">
+        <a href="./養心院.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F" style-hover="background:#F3EFE7;color:#04474F">繁</a>
+        <a href="./养心院.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F;border-left:1px solid rgba(4,71,79,.28)" style-hover="background:#F3EFE7;color:#04474F">简</a>
+        <a lang="en" href="./Senior-Living.dc.html" style="min-width:52px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.8rem;letter-spacing:.04em;font-weight:700;color:#fff;background:#04474F;border-left:1px solid rgba(4,71,79,.28)" aria-current="page">EN</a>
+      </div>
+      <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:48px;padding:10px 26px;font-size:.9rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">Support</a>
+      <button data-menu="" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="Menu" style="display:none;align-items:center;gap:8px;min-height:48px;padding:10px 18px;font-family:inherit;font-size:.9rem;font-weight:500;color:#04474F;background:transparent;border:1px solid #04474F;cursor:pointer"><span aria-hidden="true" style="font-size:1.05rem;line-height:1">☰</span>Menu</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding:22px 0 0"><div style="max-width:1140px;margin:0 auto;padding:0 28px">
+  <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.72rem;color:#7A878B">
+    <a href="./Beacon-Star-Foundation.dc.html" style="color:#7A878B" style-hover="color:#04474F">Home</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page" style="color:#33454B">Senior Living</span>
+  </nav>
+</div></section>
+
+<section style="padding:38px 0 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <h1 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.3;color:#04474F">Beacon Star Senior Living</h1>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">A Senior Living Community</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 60px;align-items:end;margin-top:30px">
+      <p style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(21px,2.3vw,27px);line-height:1.75;color:#04474F;max-width:24em;text-wrap:pretty">A quiet home for monks, nuns, and lifelong lay devotees, where care and daily practice happen in the same place.</p>
+      <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">The setting sun is no longer a sigh at the close of day, but the calmest, warmest, most unhurried hour of it.
+        <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— Venerable Xingren Shi</cite>
+      </blockquote>
+    </div>
+    <figure style="margin:44px 0 0">
+      <div data-ph="1897/829|1897/829|1897/829" style="position:relative;width:100%;aspect-ratio:1897/829;border:1px solid rgba(4,71,79,.14);overflow:hidden;background:#E9E3D7">
+        <a href="./site-plan-en.png" target="_blank" rel="noopener" style="position:absolute;inset:0;display:block;z-index:1">
+          <img data-slide="0" src="./site-plan-en.png" alt="Aerial rendering of the campus: the main Buddha hall at the center, the senior home to the west, the Buddhist college to the east, meditation hall and monastic quarters to the north, parking and main entrance to the south" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;transition:opacity .9s ease">
+          <div data-slide="1" style="position:absolute;inset:0;background:#F8F2E7;opacity:0;transition:opacity .9s ease">
+            <img src="./render-senior-living.png" alt="Watercolor rendering of the building: three stories, cream walls, red tile roof, an accessible ramp and handrails at the portico, garden paths all around" style="width:100%;height:100%;object-fit:cover">
+          </div>
+        </a>
+        <div role="tablist" aria-label="Rendering of Beacon Star Senior Living" style="position:absolute;left:0;right:0;bottom:12px;z-index:2;display:flex;justify-content:center;gap:9px">
+          <button data-dot="0" type="button" onClick="{{ goto0 }}" aria-label="Campus aerial" aria-selected="{{ sel0 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:#FBFAF7;cursor:pointer;box-shadow:0 0 4px rgba(0,0,0,.4)"></button>
+          <button data-dot="1" type="button" onClick="{{ goto1 }}" aria-label="Building rendering" aria-selected="{{ sel1 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:transparent;cursor:pointer;box-shadow:0 0 4px rgba(0,0,0,.4)"></button>
+        </div>
+      </div>
+      <figcaption style="margin-top:14px;padding-bottom:16px;border-bottom:1px solid rgba(4,71,79,.18);display:flex;gap:10px 24px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;font-size:.85rem;line-height:1.7;color:#4A5A5F">
+        <span>Site plan and building renderings  ·  Click to enlarge</span>
+        <span>Renderings are illustrative; the final configuration follows the approved building permit.</span>
+      </figcaption>
+    </figure>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:2px">
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;color:#04474F">A place to rest</div>
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;color:#04474F;border-left:1px solid rgba(4,71,79,.14);border-right:1px solid rgba(4,71,79,.14)">A home for the heart</div>
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;color:#04474F">Aspiration fulfilled</div>
+    </div>
+  </div>
+</section>
+
+<section id="vision" style="padding:92px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F">Vision &amp; Purpose</span>
+      <span lang="zh-Hant" style="font-size:.7rem;letter-spacing:.2em;color:#2F6B72">願景與宗旨</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),auto));gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:18px;max-width:240px">
+        <div style="width:180px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-xingren-sq.png" alt="Venerable Xingren Shi" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;font-weight:600;color:#04474F">Venerable Xingren Shi</p>
+          <p style="font-size:.85rem;line-height:1.7;color:#4A5A5F;margin-top:4px">Abbot &amp; President, American Buddhist Fellowship<br>Founder, Beacon Star Senior Living</p>
+          <p lang="en" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72;margin-top:10px">From “An Appeal to Build Beacon Star Senior Living Together”</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:34em">
+        <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;text-wrap:balance">Where this began</h2>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">Over many years of teaching I saw a monk pass away in an ordinary nursing home with no one to care for him. I saw many elders end their lives alone and afraid, without vegetarian meals, without Dharma teaching. I remember a fellow monk whose passing left his elderly mother with no one to depend on; only a temple-run home took her in.</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">This taught me something I cannot unlearn: a Buddhist home for elders is not only shelter. It is a place where compassion is practiced and the bodhisattva path is carried through. When monastics are present to chant and to teach at the bedside, the dying are steadied and calmed, and their passing is helped. That is why Beacon Star Senior Living exists.</p>
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:4px 0 0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">To watch over someone is not just to hold a torch high toward the distance. It is to bend down, so that a small light falls exactly on the face in front of you that needs warmth.
+          <cite style="display: block; margin-top: 16px; font-family: inherit; font-style: normal; font-size: 0.85rem; font-weight: 400; color: rgb(74, 90, 95);">— Venerable Xingren Shi</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:26px;margin-top:72px;padding-top:44px;border-top:1px solid rgba(4,71,79,.18)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+        <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.25rem;line-height:1.6;color:#04474F;text-wrap:pretty">Care, recitation, chanting at the bedside, companionship, and passing — held together in one place</p>
+        <p lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Five Commitments</p>
+      </div>
+      <ol style="list-style:none;display:flex;flex-direction:column">
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">01</span>
+          <span data-vrow="" style="display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:6px 26px;align-items:baseline">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Daily living and nursing care</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B">Assistance with daily living, meals, medical and accessible care. Fully vegetarian.</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">02</span>
+          <span data-vrow="" style="display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:6px 26px;align-items:baseline">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">A hall for recitation practice</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B">The Buddha’s name is chanted daily, sustaining a quiet environment for practice.</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">03</span>
+          <span data-vrow="" style="display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:6px 26px;align-items:baseline">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Hospice chanting support</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B">Trained chanting support and end-of-life care, so that passing may be peaceful.</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">04</span>
+          <span data-vrow="" style="display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:6px 26px;align-items:baseline">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">A harbor of compassionate care</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B">Dharma teaching, emotional support, and care through illness and pain.</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18);border-bottom:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">05</span>
+          <span data-vrow="" style="display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:6px 26px;align-items:baseline">
+            <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">For Buddhists far from home</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B">An answer to growing old with no one to turn to, and to dying without help — so that a life of practice has somewhere to come home to.</span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="funds" style="padding:92px 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F">How your gift is used</span>
+      <span lang="zh-Hant" style="font-size:.7rem;letter-spacing:.2em;color:#2F6B72">捐款如何用於養心院</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:60px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:34em">
+        <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;text-wrap:balance">Dedicated funds for designated use</h2>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The Foundation is already operating. Make checks payable to Beacon Star Foundation and mail them to the temple address below. Every gift is a <b style="font-weight:700;border-bottom:3px solid #FFD12C;padding-bottom:1px;white-space:nowrap">restricted gift</b>: it goes in full to building and running Beacon Star Senior Living, and to nothing else.</p>
+        <dl style="display:flex;flex-direction:column;gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Construction and interiors</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">Structural work, interior build-out, fire protection and life-safety systems.</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Medical and accessibility</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">Nursing station equipment, call systems, elevators, ramps and handrails.</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Permitting and professional advice</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">Applications through health, fire and environmental agencies, plus legal and policy counsel.</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'EB Garamond',Georgia,serif;font-size:1.1rem;font-weight:600;color:#04474F">Long-term operations</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">Steady funding for medical and nursing staff, kitchen, and care volunteers.</dd>
+          </div>
+        </dl>
+        <p style="font-size:.9rem;line-height:1.85;color:#4A5A5F">Beacon Star Foundation is an independent 501(c)(3) nonprofit organization, EIN 37-1483029. Gifts are tax-deductible as allowed by law.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div style="border:1px solid rgba(4,71,79,.22);background:#F3EFE7;padding:32px 30px;display:flex;flex-direction:column;gap:22px">
+          <p lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Donation Details</p>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F">Make checks payable to</p>
+            <p lang="en" style="font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;line-height:1.5;color:#04474F;margin-top:4px">Beacon Star Foundation</p>
+          </div>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F">Mailing address</p>
+            <p lang="en" style="font-size:1rem;line-height:1.7;color:#16262B;margin-top:4px">1478 E. Holt Ave<br>Covina, CA 91724</p>
+          </div>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F"><span lang="en">Zelle Pay</span></p>
+            <p style="margin-top:4px"><a lang="en" href="mailto:beaconstarfoundation@gmail.com" style="font-size:.95rem;color:#04474F;border-bottom:1px solid rgba(4,71,79,.35);word-break:break-all">beaconstarfoundation@gmail.com</a></p>
+          </div>
+          <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;font-size:1rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">Donate</a>
+        </div>
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">A dollar given today, an hour of help, a single recitation of the Buddha’s name, even a dedication of merit — each of these is a spark.
+          <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— Venerable Xingren Shi</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="talent" style="padding:92px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F">You can help</span>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Join Us</span>
+    </div>
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;max-width:22em;margin-bottom:44px;text-wrap:balance">Beacon Star Senior Living will a village. We warmly invite:</h2>
+    <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">Expertise and operations</span>
+          <span lang="zh-Hant" style="font-size:.68rem;letter-spacing:.16em;color:#2F6B72">專業與營運</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>Legal and policy advisers familiar with senior-care regulation</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">Managers experienced in elder services or nonprofit operations</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">Architects and space-planning professionals</span>
+        </dd>
+      </div>
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">Medical and care</span>
+          <span lang="zh-Hant" style="font-size:.68rem;letter-spacing:.16em;color:#2F6B72">醫護與照顧</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>Physicians, nurses, and care aides</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">Kitchen staff</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">Housekeeping staff</span>
+        </dd>
+      </div>
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">Practice and companionship</span>
+          <span lang="zh-Hant" style="font-size:.68rem;letter-spacing:.16em;color:#2F6B72">修行與陪伴</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>Fellow practitioners for bedside chanting and pastoral care</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">Volunteers willing to keep company with elders</span>
+        </dd>
+      </div>
+    </dl>
+    <p style="font-size:1rem;line-height:1.85;color:#33454B;margin-top:36px;max-width:34em;text-wrap:pretty">If you cannot take part yourself, we hope you will pass word along.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="mailto:info@meifo.org?subject=%E9%A4%8A%E5%BF%83%E9%99%A2%E8%AD%B7%E6%8C%81%E4%BA%BA%E6%89%8D" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">Volunteer</a>
+      <a href="tel:+16262134563" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">Call (626) 213-4563</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:88px 0">
+  <div style="max-width:820px;margin:0 auto;padding:0 28px;text-align:center">
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.45;color:#04474F;text-wrap:balance">Building a home for elders is harder than building a temple. This is lasting work.</h2>
+    <p style="font-size:1rem;line-height:1.85;color:#33454B;margin-top:22px;text-wrap:pretty">If you have means, give toward the building. If you have professional skill, join the work. If you have a wide circle, tell them. If you have compassion, dedicate merit and pray for it.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px">
+      <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">Support Senior Living</a>
+      <a href="./Our-Origin.dc.html" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">Read our origin</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#03323A;color:rgba(255,255,255,.88);font-size:.9rem;line-height:1.85">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;flex-direction:column;gap:40px;padding:64px 0 48px">
+      <div data-fbrand="">
+        <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;color:#fff">Beacon Star Foundation</p>
+        <p lang="zh-Hant" style="font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.7);margin-bottom:16px">星星之火基金會</p>
+        <p style="font-size:.85rem;line-height:1.85">1478 E. Holt Ave<br>Covina, CA 91724, U.S.A.</p>
+        <p style="display:flex;flex-direction:column;gap:4px;margin-top:10px">
+          <a href="tel:+16262134563" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">(626) 213-4563</a>
+          <a href="mailto:info@meifo.org" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">info@meifo.org</a>
+        </p>
+      </div>
+      <div data-flinks="">
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">About us</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./Our-Origin.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Our Origin</a></li>
+          <li><a href="./Our-Origin.dc.html#name" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">In His Words</a></li>
+          <li><a href="./Our-Team.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Our Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">Senior Living</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./Senior-Living.dc.html#vision" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Vision &amp; Purpose</a></li>
+          <li><a href="./Senior-Living.dc.html#funds" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Use of gifts</a></li>
+          <li><a href="./Senior-Living.dc.html#talent" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">People we are looking for</a></li>
+          <li><a href="./Beacon-Star-Foundation.dc.html#progress" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Progress</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">Affiliated</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="https://meifo.org" target="_blank" rel="noopener" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Meifo Temple · meifo.org</a></li>
+          <li><a href="./Beacon-Star-Foundation.dc.html#contact" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Newsletter</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.18);padding:28px 0 44px">
+      <p style="max-width:56em;font-size:.8rem;line-height:1.85;color:rgba(255,255,255,.8)">Beacon Star Foundation is an independent 501(c)(3) nonprofit organization, EIN 37-1483029. The Foundation was initiated and is supported by Meifo Temple (American Buddhist Fellowship); the two remain separate legal entities. Beacon Star Senior Living is independently operated and independently managed.</p>
+      <p style="margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.8)">© 2026 Beacon Star Foundation</p>
+    </div>
+  </div>
+</footer>
+
+<div data-mobilebar="" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;background:rgba(251,250,247,.96);border-top:1px solid rgba(4,71,79,.2);gap:10px">
+  <a href="./Beacon-Star-Foundation.dc.html#support" style="flex:2;display:flex;align-items:center;justify-content:center;min-height:56px;background:#04474F;color:#fff;font-size:1rem;font-weight:500">Support Senior Living</a>
+  <a href="tel:+16262134563" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:56px;color:#04474F;border:1px solid #04474F;font-size:1rem;font-weight:500">Call</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { aboutOpen: false, menuOpen: false, mode: 'wide', slide: 0 };
+
+  componentDidMount() {
+    this.onResize = () => {
+      const w = window.innerWidth;
+      const mode = w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide');
+      if (mode !== this.state.mode) this.setState({ mode, menuOpen: false, aboutOpen: false });
+      this.syncHeader(mode);
+    };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    this.onDocClick = (e) => {
+      if (!e.target.closest) return;
+      if (this.state.aboutOpen && !e.target.closest('[data-nav-group]')) this.setState({ aboutOpen: false });
+      if (this.state.menuOpen && e.target.closest('header nav a')) this.setState({ menuOpen: false });
+    };
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.aboutOpen) this.setState({ aboutOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+    this.syncSlides();
+    this.startCarousel();
+  }
+  componentDidUpdate() { this.syncHeader(); this.syncSlides(); }
+
+  startCarousel() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const fig = document.querySelector('figure [data-slide]');
+    const host = fig && fig.parentElement;
+    if (host && !host.dataset.bound) {
+      host.dataset.bound = '1';
+      host.addEventListener('mouseenter', () => { this.paused = true; });
+      host.addEventListener('mouseleave', () => { this.paused = false; });
+      host.addEventListener('focusin', () => { this.paused = true; });
+      host.addEventListener('focusout', () => { this.paused = false; });
+    }
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      if (this.paused) return;
+      this.setState(s => ({ slide: s.slide ? 0 : 1 }));
+    }, 6000);
+  }
+
+  syncSlides() {
+    const cur = this.state.slide || 0;
+    document.querySelectorAll('[data-slide]').forEach(el => {
+      el.style.opacity = Number(el.dataset.slide) === cur ? '1' : '0';
+    });
+    document.querySelectorAll('[data-dot]').forEach(dot => {
+      dot.style.background = Number(dot.dataset.dot) === cur ? '#FBFAF7' : 'transparent';
+    });
+  }
+
+  syncImages(mode) {
+    const idx = mode === 'phone' ? 2 : (mode === 'tablet' ? 1 : 0);
+    document.querySelectorAll('[data-ph]').forEach(el => {
+      const specs = (el.getAttribute('data-ph') || '').split('|');
+      const spec = specs[idx] || specs[0] || '1';
+      Object.assign(el.style, { aspectRatio: spec, minHeight: '0px', flex: '0 0 auto', width: '100%' });
+    });
+  }
+
+  measureHeader() {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const h = getComputedStyle(el).position === 'sticky' ? el.offsetHeight : 0;
+    document.documentElement.style.setProperty('--hdr', h + 'px');
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    window.removeEventListener('resize', this.onResize);
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+
+  syncHeader(mode) {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const w = window.innerWidth;
+    const m = mode || (w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide'));
+    const phone = m === 'phone';
+    const nav = el.querySelector('nav');
+    const right = nav && nav.nextElementSibling;
+    const btn = el.querySelector('[data-menu]');
+    const langBar = right && right.querySelector('[role="group"]');
+    const util = el.querySelector('[data-util="lang"]');
+    const open = this.state.menuOpen;
+
+    if (this.observed !== el) {
+      if (this.ro) this.ro.disconnect();
+      this.ro = new ResizeObserver(() => this.measureHeader());
+      this.ro.observe(el);
+      this.observed = el;
+    }
+
+    Object.assign(el.style, { position: phone ? 'static' : 'sticky', top: '0', zIndex: '50' });
+
+    if (nav) {
+      const items = Array.prototype.slice.call(nav.children);
+      Object.assign(nav.style, {
+        position: phone ? 'fixed' : 'static',
+        inset: phone ? '0' : 'auto',
+        zIndex: phone ? '80' : 'auto',
+        background: phone ? '#FBFAF7' : 'transparent',
+        overflowY: phone ? 'auto' : 'visible',
+        order: m === 'wide' ? '2' : '3',
+        flex: m === 'wide' ? '0 1 auto' : (m === 'tablet' ? '0 0 auto' : '0 0 100%'),
+        width: m === 'tablet' ? 'calc(100% + 56px)' : (phone ? '100%' : 'auto'),
+        display: phone ? (open ? 'flex' : 'none') : (m === 'tablet' ? 'grid' : 'flex'),
+        gridTemplateColumns: m === 'tablet' ? 'repeat(' + items.length + ',1fr)' : '',
+        flexDirection: phone ? 'column' : 'row',
+        alignItems: phone ? 'stretch' : 'center',
+        justifyContent: m === 'wide' ? 'flex-end' : (phone ? 'flex-start' : 'space-between'),
+        gap: phone ? '0' : '2px 20px',
+        margin: m === 'tablet' ? '10px -28px -12px' : (m === 'wide' ? '0' : '2px 0 0'),
+        padding: phone ? '124px 24px 40px' : (m === 'tablet' ? '0 28px' : '0')
+      });
+      const wrap = nav.parentElement;
+      if (wrap) {
+        wrap.style.padding = phone ? '18px 20px 14px' : '12px 28px';
+        wrap.style.flexWrap = m === 'wide' ? 'nowrap' : 'wrap';
+      }
+      items.forEach((it, i) => {
+        const group = it.hasAttribute('data-nav-group');
+        const target = group ? it.querySelector('button') : it;
+        if (!target) return;
+        if (group) Object.assign(it.style, {
+          position: phone ? 'static' : 'relative',
+          flexDirection: phone ? 'column' : 'row',
+          alignItems: phone ? 'stretch' : 'center',
+          justifyContent: phone ? 'flex-start' : 'center',
+          justifySelf: 'stretch',
+          width: m === 'wide' ? 'auto' : '100%'
+        });
+        Object.assign(target.style, {
+          minHeight: phone ? '50px' : (m === 'tablet' ? '56px' : '44px'),
+          padding: phone ? '4px 2px' : (m === 'tablet' ? '8px 20px' : '8px 0'),
+          justifyContent: m === 'tablet' ? 'center' : 'flex-start',
+          fontSize: phone ? '.95rem' : '.9rem',
+          fontWeight: m === 'tablet' ? '500' : '400',
+          justifySelf: phone ? 'stretch' : 'center',
+          whiteSpace: 'nowrap',
+          width: phone ? '100%' : 'auto'
+        });
+        const cur = target.hasAttribute('data-current') || target.getAttribute('aria-current') === 'page';
+        if (phone) {
+          target.style.borderBottom = i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)';
+          target.style.borderLeft = cur ? '4px solid #FFD12C' : '4px solid transparent';
+          target.style.paddingLeft = '14px';
+          target.style.color = cur ? '#04474F' : '#16262B';
+        } else {
+          target.style.borderLeft = 'none';
+          target.style.borderBottom = cur ? '3px solid #FFD12C' : '3px solid transparent';
+          if (cur) { target.style.color = '#04474F'; target.style.fontWeight = '600'; }
+        }
+      });
+
+      const dd = nav.querySelector('[data-nav-group] > div');
+      const caret = nav.querySelector('[data-nav-group] button span');
+      if (caret) caret.style.display = phone ? 'none' : 'inline';
+      if (dd) {
+        Object.assign(dd.style, phone ? {
+          position: 'static', display: 'block', minWidth: '0', background: 'transparent',
+          border: 'none', borderBottom: '1px solid rgba(4,71,79,.12)', boxShadow: 'none'
+        } : {
+          position: 'absolute', display: this.state.aboutOpen ? 'block' : 'none', minWidth: '190px',
+          background: '#FBFAF7', border: '1px solid rgba(4,71,79,.22)', boxShadow: '0 12px 28px rgba(4,71,79,.1)'
+        });
+        Array.prototype.forEach.call(dd.querySelectorAll('a'), (a, i) => {
+          const on = a.getAttribute('aria-current') === 'page';
+          Object.assign(a.style, {
+            minHeight: '50px',
+            padding: phone ? '4px 2px 4px 42px' : '10px 20px',
+            fontWeight: on ? '600' : '400',
+            color: on ? '#04474F' : '#33454B',
+            borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
+            background: phone && on ? '#F3EFE7' : 'transparent',
+            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+          });
+        });
+      }
+    }
+    if (right) right.style.order = m === 'wide' ? '3' : '2';
+    const cta = right && right.querySelector('a[href*="#support"]');
+    if (phone) {
+      if (cta) Object.assign(cta.style, { minHeight: '52px', height: '52px', padding: '0 24px' });
+      if (btn) Object.assign(btn.style, { minHeight: '52px', height: '52px', padding: '0 18px' });
+    } else {
+      if (cta) Object.assign(cta.style, { minHeight: '48px', height: 'auto', padding: '10px 26px' });
+      if (btn) Object.assign(btn.style, { minHeight: '48px', height: 'auto', padding: '10px 18px' });
+    }
+    if (btn) {
+      Object.assign(btn.style, phone && open
+        ? { display: 'flex', position: 'fixed', top: '58px', right: '16px', zIndex: '90', background: '#FBFAF7' }
+        : { display: phone ? 'flex' : 'none', position: 'relative', top: 'auto', right: 'auto', zIndex: '90', background: 'transparent' });
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = open ? '✕' : '☰';
+      const label = Array.prototype.find.call(btn.childNodes, n => n.nodeType === 3 && n.textContent.trim());
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    }
+    document.body.style.overflow = phone && open ? 'hidden' : '';
+    if (langBar) langBar.style.display = phone ? 'none' : 'flex';
+    if (util) Object.assign(util.style, {
+      display: phone ? 'block' : 'none',
+      position: phone && open ? 'fixed' : 'static',
+      top: '0', left: '0', right: '0',
+      zIndex: phone && open ? '85' : 'auto'
+    });
+    const bar = document.querySelector('[data-mobilebar]');
+    if (bar) bar.style.display = 'none';
+    this.syncImages(m);
+    document.body.style.paddingBottom = '';
+    requestAnimationFrame(() => this.measureHeader());
+  }
+
+  renderVals() {
+    return {
+      sel0: (this.state.slide || 0) === 0 ? 'true' : 'false',
+      sel1: (this.state.slide || 0) === 1 ? 'true' : 'false',
+      goto0: () => this.setState({ slide: 0 }),
+      goto1: () => this.setState({ slide: 1 }),
+      aboutExpanded: this.state.aboutOpen ? 'true' : 'false',
+      aboutDisplay: this.state.aboutOpen ? 'block' : 'none',
+      menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      toggleAbout: () => this.setState(s => ({ aboutOpen: !s.aboutOpen })),
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen }))
+    };
+  }
+}
+</script>
+</body>
+</html>
+

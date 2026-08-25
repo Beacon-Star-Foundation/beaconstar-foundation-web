@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{background:#FBFAF7;color:#16262B;margin:0}html{color-scheme:light}footer [data-flinks]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 26px}@media (max-width:699px){footer [data-fbrand]{display:none}footer [data-flinks]{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}}html.om-hold body{opacity:0}html.om-in body{opacity:1;transition:opacity .26s cubic-bezier(.22,.61,.24,1)}@media (prefers-reduced-motion:reduce){html.om-in body{transition:none}}</style>
+<script>(function(){var h=document.documentElement;h.className+=" om-hold";var done=0,mo,cap;function go(){if(done)return;done=1;clearTimeout(cap);if(mo)mo.disconnect();h.className=h.className.replace(" om-hold","")+" om-in";}function ready(){var r=document.getElementById("dc-root");return r&&r.getBoundingClientRect().height>240;}function check(){if(ready())requestAnimationFrame(go);}cap=setTimeout(go,1500);document.addEventListener("DOMContentLoaded",function(){try{mo=new MutationObserver(check);mo.observe(document.body,{childList:true,subtree:true});}catch(e){}check();});})();</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="星星之火基金会工作团队。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=fallback" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:21px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#FBFAF7;color:#16262B;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",-apple-system,"Helvetica Neue",sans-serif;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;text-spacing-trim:trim-start}
+img{max-width:100%;display:block}
+a{color:#04474F;text-decoration:none}
+a:hover{color:#03323A}
+[id]{scroll-margin-top:calc(var(--hdr, 132px) + 24px)}
+:focus-visible{outline:3px solid #8A6A00;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<div style="display:flex;flex-direction:column">
+
+<header style="background:#FBFAF7;border-bottom:1px solid rgba(4,71,79,.18)">
+  <div data-util="lang" style="display:none;background:#03323A">
+    <div role="group" aria-label="语言 Language" style="max-width:1140px;margin:0 auto;padding:0 20px;min-height:40px;display:flex;align-items:center;justify-content:flex-end;gap:2px">
+      <a href="./工作團隊.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">繁体</a>
+      <a href="./工作团队.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:#fff;background:rgba(255,255,255,.14)" aria-current="page">简体</a>
+      <a lang="en" href="./Our-Team.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.7rem;letter-spacing:.03em;color:rgba(255,255,255,.82)">English</a>
+    </div>
+  </div>
+  <div style="max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:10px 24px;flex-wrap:wrap;justify-content:space-between">
+    <a href="./星星之火基金会-首页-v4.dc.html" style="display:flex;align-items:center;gap:14px;flex-shrink:0;min-height:44px">
+      <img src="./logo.png" alt="星星之火基金会标志" style="width:52px;height:52px">
+      <span>
+        <span style="display:block;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;font-weight:600;color:#04474F;line-height:1.3">星星之火基金会</span>
+        <span lang="en" style="display:block;font-size:.6rem;letter-spacing:.18em;color:#2F6B72;text-transform:uppercase;line-height:1.5">Beacon Star Foundation</span>
+      </span>
+    </a>
+    <nav aria-label="主导览" style="display:flex;align-items:center;justify-content:flex-end;gap:2px 20px;flex-wrap:wrap">
+      <a href="./星星之火基金会-首页-v4.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">首页</a>
+      <div data-nav-group="" style="position:relative;display:flex;align-items:center">
+        <button data-current="" type="button" onClick="{{ toggleAbout }}" aria-expanded="{{ aboutExpanded }}" style="display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 14px;font-family:inherit;font-size:.9rem;font-weight:600;color:#04474F;background:transparent;border:none;border-bottom:3px solid #FFD12C;cursor:pointer">关于我们<span aria-hidden="true" style="font-size:.5rem;line-height:1;color:#2F6B72">▼</span></button>
+        <div style="display:{{ aboutDisplay }};position:absolute;top:100%;left:0;min-width:190px;z-index:70;background:#FBFAF7;border:1px solid rgba(4,71,79,.22);box-shadow:0 12px 28px rgba(4,71,79,.1)">
+          <a href="./缘起故事.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B" style-hover="background:#F3EFE7;color:#04474F">缘起故事</a>
+          <a href="./工作团队.dc.html" aria-current="page" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;font-weight:600;color:#04474F;border-top:1px solid rgba(4,71,79,.12)">工作团队</a>
+        </div>
+      </div>
+      <a href="./养心院.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">养心院</a>
+      <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">捐献护持</a>
+      <a href="./星星之火基金会-首页-v4.dc.html#contact" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">联络我们</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap">
+      <div role="group" aria-label="语言 Language" style="display:flex;border:1px solid rgba(4,71,79,.28)">
+        <a href="./工作團隊.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F" style-hover="background:#F3EFE7;color:#04474F">繁</a>
+        <a href="./工作团队.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:#fff;background:#04474F;border-left:1px solid rgba(4,71,79,.28)" aria-current="page">简</a>
+        <a lang="en" href="./Our-Team.dc.html" style="min-width:52px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.8rem;letter-spacing:.04em;color:#04474F;border-left:1px solid rgba(4,71,79,.28)" style-hover="background:#F3EFE7;color:#04474F">EN</a>
+      </div>
+      <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:48px;padding:10px 26px;font-size:.9rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">护持</a>
+      <button data-menu="" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="选单" style="display:none;align-items:center;gap:8px;min-height:48px;padding:10px 18px;font-family:inherit;font-size:.9rem;font-weight:500;color:#04474F;background:transparent;border:1px solid #04474F;cursor:pointer"><span aria-hidden="true" style="font-size:1.05rem;line-height:1">☰</span>选单</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding:22px 0 0"><div style="max-width:1140px;margin:0 auto;padding:0 28px">
+  <nav aria-label="面包屑" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.72rem;color:#7A878B">
+    <a href="./星星之火基金会-首页-v4.dc.html" style="color:#7A878B" style-hover="color:#04474F">首页</a>
+    <span aria-hidden="true">›</span>
+    <a href="./缘起故事.dc.html" style="color:#7A878B" style-hover="color:#04474F">关于我们</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page" style="color:#33454B">工作团队</span>
+  </nav>
+</div></section>
+
+<section style="padding:38px 0 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <h1 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.3;color:#04474F">工作团队</h1>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Our Team</span>
+    </div>
+    <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:clamp(21px,2.3vw,27px);line-height:1.75;color:#04474F;max-width:24em;margin-top:30px;text-wrap:pretty">现阶段承担基金会会务的成员。</p>
+  </div>
+</section>
+
+<section style="padding:52px 0 92px">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(126px,22%,46%),1fr));gap:44px clamp(18px,3vw,40px)">
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-xingren-sq.png" alt="释性仁法师" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">释性仁法师</h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">会长</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">President</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#EFEADF 0 12px,#F6F2EA 12px 24px);border:1px solid rgba(4,71,79,.14);display:grid;place-items:center;padding:18px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.06em;color:#6F7F83">照片 800×800</span>
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">王丽娟</h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">財务</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">Treasurer</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-zhangjuan-sq-v2.png" alt="张娟（圆心）" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">张娟<span style="font-size:.9rem;font-weight:400;color:#4A5A5F">（圆心）</span></h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">秘書</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">Secretary</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-shenyun-sq.png" alt="沈芸" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">沈芸</h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">募款理事</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">Director of Development</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:repeating-linear-gradient(135deg,#EFEADF 0 12px,#F6F2EA 12px 24px);border:1px solid rgba(4,71,79,.14);display:grid;place-items:center;padding:18px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.06em;color:#6F7F83">照片 800×800</span>
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">何宏非</h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">募款理事</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">Director of Development</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-sissi-sq.png" alt="樊京舟（Sissi）" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">樊京舟<span style="font-size:.9rem;font-weight:400;color:#4A5A5F">（<span lang="en">Sissi</span>）</span></h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">宣传理事</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">Director of Communications</p>
+        </div>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:100%;max-width:220px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-liangsicong-sq-v7.png" alt="梁思聪" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:1.25rem;line-height:1.4;color:#04474F">梁思聪</h2>
+          <p style="font-size:.85rem;letter-spacing:.04em;color:#2F6B72;margin-top:6px">网络平台管理</p>
+          <p lang="en" style="font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#7A878B;margin-top:3px">DIRECTOR OF DIGITAL PLATFORMS</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer style="background:#03323A;color:rgba(255,255,255,.88);font-size:.9rem;line-height:1.85">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;flex-direction:column;gap:40px;padding:64px 0 48px">
+      <div data-fbrand="">
+        <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;color:#fff">星星之火基金会</p>
+        <p lang="en" style="font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:16px">Beacon Star Foundation</p>
+        <p style="font-size:.85rem;line-height:1.85">1478 E. Holt Ave<br>Covina, CA 91724, U.S.A.</p>
+        <p style="display:flex;flex-direction:column;gap:4px;margin-top:10px">
+          <a href="tel:+16262134563" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">(626) 213-4563</a>
+          <a href="mailto:info@meifo.org" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">info@meifo.org</a>
+        </p>
+      </div>
+      <div data-flinks="">
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">认识我们</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./缘起故事.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">缘起故事</a></li>
+          <li><a href="./缘起故事.dc.html#name" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">名字的由来</a></li>
+          <li><a href="./工作团队.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">工作团队</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">养心院</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./养心院.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">愿景与规划</a></li>
+          <li><a href="./星星之火基金会-首页-v4.dc.html#progress" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">筹建进度</a></li>
+          <li><a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">护持</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">关联机构</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="https://meifo.org" target="_blank" rel="noopener" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">灵山美佛寺 meifo.org</a></li>
+          <li><a href="./星星之火基金会-首页-v4.dc.html#contact" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">订阅电子报</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.18);padding:28px 0 44px">
+      <p style="max-width:56em;font-size:.8rem;line-height:1.85;color:rgba(255,255,255,.8)">星星之火基金会（<span lang="en">Beacon Star Foundation</span>）为独立之 <span lang="en">501(c)(3)</span> 公益组织，<span lang="en">EIN 37-1483029</span>。本会由灵山美佛寺（<span lang="en">American Buddhist Fellowship</span>）发起护持，两者各为独立之法律主体。</p>
+      <p style="margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.8)">© 2026 <span lang="en">Beacon Star Foundation</span></p>
+    </div>
+  </div>
+</footer>
+
+<div data-mobilebar="" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;background:rgba(251,250,247,.96);border-top:1px solid rgba(4,71,79,.2);gap:10px">
+  <a href="./星星之火基金会-首页-v4.dc.html#support" style="flex:2;display:flex;align-items:center;justify-content:center;min-height:56px;background:#04474F;color:#fff;font-size:1rem;font-weight:500">护持养老院</a>
+  <a href="tel:+16262134563" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:56px;color:#04474F;border:1px solid #04474F;font-size:1rem;font-weight:500">电话</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { aboutOpen: false, menuOpen: false, mode: 'wide' };
+
+  componentDidMount() {
+    this.onResize = () => {
+      const w = window.innerWidth;
+      const mode = w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide');
+      if (mode !== this.state.mode) this.setState({ mode, menuOpen: false, aboutOpen: false });
+      this.syncHeader(mode);
+    };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    this.onDocClick = (e) => {
+      if (!e.target.closest) return;
+      if (this.state.aboutOpen && !e.target.closest('[data-nav-group]')) this.setState({ aboutOpen: false });
+      if (this.state.menuOpen && e.target.closest('header nav a')) this.setState({ menuOpen: false });
+    };
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.aboutOpen) this.setState({ aboutOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+  }
+  componentDidUpdate() { this.syncHeader(); }
+
+  measureHeader() {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const h = getComputedStyle(el).position === 'sticky' ? el.offsetHeight : 0;
+    document.documentElement.style.setProperty('--hdr', h + 'px');
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+
+  /* same three header layouts as the homepage: wide = one row; tablet = nav on
+     row 2 under a hairline; phone = nav behind 选单, header unsticks */
+  syncHeader(mode) {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const w = window.innerWidth;
+    const m = mode || (w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide'));
+    const phone = m === 'phone';
+    const nav = el.querySelector('nav');
+    const right = nav && nav.nextElementSibling;
+    const btn = el.querySelector('[data-menu]');
+    const langBar = right && right.querySelector('[role="group"]');
+    const util = el.querySelector('[data-util="lang"]');
+    const open = this.state.menuOpen;
+
+    if (this.observed !== el) {
+      if (this.ro) this.ro.disconnect();
+      this.ro = new ResizeObserver(() => this.measureHeader());
+      this.ro.observe(el);
+      this.observed = el;
+    }
+
+    Object.assign(el.style, { position: phone ? 'static' : 'sticky', top: '0', zIndex: '50' });
+
+    if (nav) {
+      const items = Array.prototype.slice.call(nav.children);
+      Object.assign(nav.style, {
+        position: phone ? 'fixed' : 'static',
+        inset: phone ? '0' : 'auto',
+        zIndex: phone ? '80' : 'auto',
+        background: phone ? '#FBFAF7' : 'transparent',
+        overflowY: phone ? 'auto' : 'visible',
+        order: m === 'wide' ? '2' : '3',
+        flex: m === 'wide' ? '0 1 auto' : (m === 'tablet' ? '0 0 auto' : '0 0 100%'),
+        width: m === 'tablet' ? 'calc(100% + 56px)' : (phone ? '100%' : 'auto'),
+        display: phone ? (open ? 'flex' : 'none') : (m === 'tablet' ? 'grid' : 'flex'),
+        gridTemplateColumns: m === 'tablet' ? 'repeat(' + items.length + ',1fr)' : '',
+        flexDirection: phone ? 'column' : 'row',
+        alignItems: phone ? 'stretch' : 'center',
+        justifyContent: m === 'wide' ? 'flex-end' : (phone ? 'flex-start' : 'space-between'),
+        gap: phone ? '0' : '2px 20px',
+        margin: m === 'tablet' ? '10px -28px -12px' : (m === 'wide' ? '0' : '2px 0 0'),
+        padding: phone ? '124px 24px 40px' : (m === 'tablet' ? '0 28px' : '0')
+      });
+      const wrap = nav.parentElement;
+      if (wrap) {
+        wrap.style.padding = phone ? '18px 20px 14px' : '12px 28px';
+        wrap.style.flexWrap = m === 'wide' ? 'nowrap' : 'wrap';
+      }
+      items.forEach((it, i) => {
+        const group = it.hasAttribute('data-nav-group');
+        const target = group ? it.querySelector('button') : it;
+        if (!target) return;
+        if (group) Object.assign(it.style, {
+          position: phone ? 'static' : 'relative',
+          flexDirection: phone ? 'column' : 'row',
+          alignItems: phone ? 'stretch' : 'center',
+          justifyContent: phone ? 'flex-start' : 'center',
+          justifySelf: 'stretch',
+          width: m === 'wide' ? 'auto' : '100%'
+        });
+        Object.assign(target.style, {
+          minHeight: phone ? '50px' : (m === 'tablet' ? '56px' : '44px'),
+          padding: phone ? '4px 2px' : (m === 'tablet' ? '8px 20px' : '8px 0'),
+          justifyContent: m === 'tablet' ? 'center' : 'flex-start',
+          fontSize: phone ? '.95rem' : '.9rem',
+          fontWeight: m === 'tablet' ? '500' : '400',
+          justifySelf: phone ? 'stretch' : 'center',
+          whiteSpace: 'nowrap',
+          width: phone ? '100%' : 'auto'
+        });
+        if (!group) target.style.borderBottom = phone
+          ? (i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)')
+          : '3px solid transparent';
+        /* phone panel: "you are here" is a gold left marker, never a
+           full-width bottom bar (the rows are full-bleed in the overlay) */
+        const cur = target.hasAttribute('data-current') || target.getAttribute('aria-current') === 'page';
+        if (phone) {
+          target.style.borderBottom = i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)';
+          target.style.borderLeft = cur ? '4px solid #FFD12C' : '4px solid transparent';
+          target.style.paddingLeft = '14px';
+          target.style.color = cur ? '#04474F' : '#16262B';
+        } else {
+          target.style.borderLeft = 'none';
+          target.style.borderBottom = cur ? '3px solid #FFD12C' : '3px solid transparent';
+        }
+      });
+
+      const dd = nav.querySelector('[data-nav-group] > div');
+      const caret = nav.querySelector('[data-nav-group] button span');
+      if (caret) caret.style.display = phone ? 'none' : 'inline';
+      if (dd) {
+        Object.assign(dd.style, phone ? {
+          position: 'static', display: 'block', minWidth: '0', background: 'transparent',
+          border: 'none', borderBottom: '1px solid rgba(4,71,79,.12)', boxShadow: 'none'
+        } : {
+          position: 'absolute', display: this.state.aboutOpen ? 'block' : 'none', minWidth: '190px',
+          background: '#FBFAF7', border: '1px solid rgba(4,71,79,.22)', boxShadow: '0 12px 28px rgba(4,71,79,.1)'
+        });
+        Array.prototype.forEach.call(dd.querySelectorAll('a'), (a, i) => {
+          const on = a.getAttribute('aria-current') === 'page';
+          Object.assign(a.style, {
+            minHeight: '50px',
+            padding: phone ? '4px 2px 4px 42px' : '10px 20px',
+            fontWeight: on ? '600' : '400',
+            color: on ? '#04474F' : '#33454B',
+            /* phone: the deepest current item owns the gold marker */
+            borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
+            background: phone && on ? '#F3EFE7' : 'transparent',
+            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+          });
+        });
+        /* … so the parent row steps back to plain teal while a child is current */
+        const childOn = !!dd.querySelector('[aria-current="page"]');
+        if (phone && childOn) {
+          const gb = nav.querySelector('[data-nav-group] button');
+          if (gb) { gb.style.borderLeft = '4px solid transparent'; gb.style.fontWeight = '400'; }
+        }
+      }
+    }
+    if (right) right.style.order = m === 'wide' ? '3' : '2';
+    const cta = right && right.querySelector('a[href*="#support"]');
+    if (phone) {
+      if (cta) Object.assign(cta.style, { minHeight: '52px', height: '52px', padding: '0 24px' });
+      if (btn) Object.assign(btn.style, { minHeight: '52px', height: '52px', padding: '0 18px' });
+    } else {
+      if (cta) Object.assign(cta.style, { minHeight: '48px', height: 'auto', padding: '10px 26px' });
+      if (btn) Object.assign(btn.style, { minHeight: '48px', height: 'auto', padding: '10px 18px' });
+    }
+    if (btn) {
+      /* the overlay covers the header, so the toggle re-anchors to the
+         viewport's top-right corner while the panel is open */
+      Object.assign(btn.style, phone && open
+        ? { display: 'flex', position: 'fixed', top: '58px', right: '16px', zIndex: '90', background: '#FBFAF7' }
+        : { display: phone ? 'flex' : 'none', position: 'relative', top: 'auto', right: 'auto', zIndex: '90', background: 'transparent' });
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = open ? '✕' : '☰';
+      const label = Array.prototype.find.call(btn.childNodes, n => n.nodeType === 3 && n.textContent.trim());
+      if (label) label.textContent = open ? '关闭' : '选单';
+      btn.setAttribute('aria-label', open ? '关闭选单' : '选单');
+    }
+    document.body.style.overflow = phone && open ? 'hidden' : '';
+    if (langBar) langBar.style.display = phone ? 'none' : 'flex';
+    if (util) Object.assign(util.style, {
+      display: phone ? 'block' : 'none',
+      position: phone && open ? 'fixed' : 'static',
+      top: '0', left: '0', right: '0',
+      zIndex: phone && open ? '85' : 'auto'
+    });
+    const bar = document.querySelector('[data-mobilebar]');
+    if (bar) bar.style.display = 'none';
+    document.body.style.paddingBottom = '';
+    requestAnimationFrame(() => this.measureHeader());
+  }
+
+  renderVals() {
+    return {
+      aboutExpanded: this.state.aboutOpen ? 'true' : 'false',
+      aboutDisplay: this.state.aboutOpen ? 'block' : 'none',
+      menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      toggleAbout: () => this.setState(s => ({ aboutOpen: !s.aboutOpen })),
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen }))
+    };
+  }
+}
+</script>
+</body>
+</html>

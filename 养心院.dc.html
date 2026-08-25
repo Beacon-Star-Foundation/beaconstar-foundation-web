@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{background:#FBFAF7;color:#16262B;margin:0}html{color-scheme:light}footer [data-flinks]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 26px}@media (max-width:699px){footer [data-fbrand]{display:none}footer [data-flinks]{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}}html.om-hold body{opacity:0}html.om-in body{opacity:1;transition:opacity .26s cubic-bezier(.22,.61,.24,1)}@media (prefers-reduced-motion:reduce){html.om-in body{transition:none}}</style>
+<script>(function(){var h=document.documentElement;h.className+=" om-hold";var done=0,mo,cap;function go(){if(done)return;done=1;clearTimeout(cap);if(mo)mo.disconnect();h.className=h.className.replace(" om-hold","")+" om-in";}function ready(){var r=document.getElementById("dc-root");return r&&r.getBoundingClientRect().height>240;}function check(){if(ready())requestAnimationFrame(go);}cap=setTimeout(go,1500);document.addEventListener("DOMContentLoaded",function(){try{mo=new MutationObserver(check);mo.observe(document.body,{childList:true,subtree:true});}catch(e){}check();});})();</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="养心院是星星之火基金会的旗舰专案：一所结合修行与安养的净土家园，为出家法师与无人照顾的老居士，在生命最后阶段提供安养之处。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=fallback" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:21px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#FBFAF7;color:#16262B;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",-apple-system,"Helvetica Neue",sans-serif;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;text-spacing-trim:trim-start}
+img{max-width:100%;display:block}
+a{color:#04474F;text-decoration:none}
+a:hover{color:#03323A}
+[id]{scroll-margin-top:calc(var(--hdr, 132px) + 24px)}
+:focus-visible{outline:3px solid #8A6A00;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<div style="display:flex;flex-direction:column">
+
+<header style="background:#FBFAF7;border-bottom:1px solid rgba(4,71,79,.18)">
+  <div data-util="lang" style="display:none;background:#03323A">
+    <div role="group" aria-label="语言 Language" style="max-width:1140px;margin:0 auto;padding:0 20px;min-height:40px;display:flex;align-items:center;justify-content:flex-end;gap:2px">
+      <a href="./養心院.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">繁体</a>
+      <a href="./养心院.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:#fff;background:rgba(255,255,255,.14)" aria-current="page">简体</a>
+      <a lang="en" href="./Senior-Living.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.7rem;letter-spacing:.03em;color:rgba(255,255,255,.82)">English</a>
+    </div>
+  </div>
+  <div style="max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:10px 24px;flex-wrap:wrap;justify-content:space-between">
+    <a href="./星星之火基金会-首页-v4.dc.html" style="display:flex;align-items:center;gap:14px;flex-shrink:0;min-height:44px">
+      <img src="./logo.png" alt="星星之火基金会标志" style="width:52px;height:52px">
+      <span>
+        <span style="display:block;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;font-weight:600;color:#04474F;line-height:1.3">星星之火基金会</span>
+        <span lang="en" style="display:block;font-size:.6rem;letter-spacing:.18em;color:#2F6B72;text-transform:uppercase;line-height:1.5">Beacon Star Foundation</span>
+      </span>
+    </a>
+    <nav aria-label="主导览" style="display:flex;align-items:center;justify-content:flex-end;gap:2px 20px;flex-wrap:wrap">
+      <a href="./星星之火基金会-首页-v4.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">首页</a>
+      <div data-nav-group="" style="position:relative;display:flex;align-items:center">
+        <button type="button" onClick="{{ toggleAbout }}" aria-expanded="{{ aboutExpanded }}" style="display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 14px;font-family:inherit;font-size:.9rem;color:#16262B;background:transparent;border:none;border-bottom:3px solid transparent;cursor:pointer;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">关于我们<span aria-hidden="true" style="font-size:.5rem;line-height:1;color:#2F6B72">▼</span></button>
+        <div style="display:{{ aboutDisplay }};position:absolute;top:100%;left:0;min-width:190px;z-index:70;background:#FBFAF7;border:1px solid rgba(4,71,79,.22);box-shadow:0 12px 28px rgba(4,71,79,.1)">
+          <a href="./缘起故事.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B" style-hover="background:#F3EFE7;color:#04474F">缘起故事</a>
+          <a href="./工作团队.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B;border-top:1px solid rgba(4,71,79,.12)" style-hover="background:#F3EFE7;color:#04474F">工作团队</a>
+        </div>
+      </div>
+      <a data-current="" href="./养心院.dc.html" aria-current="page" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C">养心院</a>
+      <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">捐献护持</a>
+      <a href="./星星之火基金会-首页-v4.dc.html#contact" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">联络我们</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap">
+      <div role="group" aria-label="语言 Language" style="display:flex;border:1px solid rgba(4,71,79,.28)">
+        <a href="./養心院.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F" style-hover="background:#F3EFE7;color:#04474F">繁</a>
+        <a href="./养心院.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:#fff;background:#04474F;border-left:1px solid rgba(4,71,79,.28)" aria-current="page">简</a>
+        <a lang="en" href="./Senior-Living.dc.html" style="min-width:52px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.8rem;letter-spacing:.04em;color:#04474F;border-left:1px solid rgba(4,71,79,.28)" style-hover="background:#F3EFE7;color:#04474F">EN</a>
+      </div>
+      <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:48px;padding:10px 26px;font-size:.9rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">护持</a>
+      <button data-menu="" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="选单" style="display:none;align-items:center;gap:8px;min-height:48px;padding:10px 18px;font-family:inherit;font-size:.9rem;font-weight:500;color:#04474F;background:transparent;border:1px solid #04474F;cursor:pointer"><span aria-hidden="true" style="font-size:1.05rem;line-height:1">☰</span>选单</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding:22px 0 0"><div style="max-width:1140px;margin:0 auto;padding:0 28px">
+  <nav aria-label="面包屑" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.72rem;color:#7A878B">
+    <a href="./星星之火基金会-首页-v4.dc.html" style="color:#7A878B" style-hover="color:#04474F">首页</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page" style="color:#33454B">养心院</span>
+  </nav>
+</div></section>
+
+<section style="padding:38px 0 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <h1 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.3;color:#04474F">养心院</h1>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">A Senior Living Community</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 60px;align-items:end;margin-top:30px">
+      <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:clamp(21px,2.3vw,27px);line-height:1.75;color:#04474F;max-width:24em;text-wrap:pretty">一所结合修行与安养的清净家园。为出家法师、老护法、老居士，提供归养之处。</p>
+      <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:0;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">夕阳不再是近黄昏的叹息，而是一天当中最从容、最温暖、最舒服的时光。
+        <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— 性仁法师</cite>
+      </blockquote>
+    </div>
+    <figure style="margin:44px 0 0">
+      <div data-ph="1897/829|1897/829|1897/829" style="position:relative;width:100%;aspect-ratio:1897/829;border:1px solid rgba(4,71,79,.14);overflow:hidden;background:#E9E3D7">
+        <a href="./site-plan.png" target="_blank" rel="noopener" style="position:absolute;inset:0;display:block;z-index:1">
+          <img data-slide="0" src="./site-plan.png" alt="养心院园区鸟瞰示意图：大雄宝殿居中，西侧养老院、东侧佛学院、北侧禅堂与僧寮，南侧停车场与正门入口" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;transition:opacity .9s ease">
+          <div data-slide="1" style="position:absolute;inset:0;background:#F8F2E7;opacity:0;transition:opacity .9s ease">
+            <img src="./render-senior-living.png" alt="养心院建筑水彩渲染示意图：三层楼米白外墙、红瓦屋顶，门廊前设无障碍坡道与扶手，四周花园步道" style="width:100%;height:100%;object-fit:cover">
+          </div>
+        </a>
+        <div role="tablist" aria-label="养心院示意图" style="position:absolute;left:0;right:0;bottom:12px;z-index:2;display:flex;justify-content:center;gap:9px">
+          <button data-dot="0" type="button" onClick="{{ goto0 }}" aria-label="园区鸟瞰图" aria-selected="{{ sel0 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:#FBFAF7;cursor:pointer;box-shadow:0 0 4px rgba(0,0,0,.4)"></button>
+          <button data-dot="1" type="button" onClick="{{ goto1 }}" aria-label="建筑渲染图" aria-selected="{{ sel1 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:transparent;cursor:pointer;box-shadow:0 0 4px rgba(0,0,0,.4)"></button>
+        </div>
+      </div>
+      <figcaption style="margin-top:14px;padding-bottom:16px;border-bottom:1px solid rgba(4,71,79,.18);display:flex;gap:10px 24px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;font-size:.85rem;line-height:1.7;color:#4A5A5F">
+        <span>园区规划与建筑示意图　·　点击放大</span>
+        <span>示意图仅供参考，实际配置以核准建照为准</span>
+      </figcaption>
+    </figure>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);margin-top:2px">
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.15rem;color:#04474F">老有所养</div>
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.15rem;color:#04474F;border-left:1px solid rgba(4,71,79,.14);border-right:1px solid rgba(4,71,79,.14)">心有所归</div>
+      <div style="background:#FBFAF7;padding:26px 12px;text-align:center;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.15rem;color:#04474F">愿有所成</div>
+    </div>
+  </div>
+</section>
+
+<section id="vision" style="padding:92px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;font-weight:600;color:#04474F">愿景与宗旨</span>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Our Vision</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),auto));gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:18px;max-width:240px">
+        <div style="width:180px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-xingren-sq.png" alt="释性仁法师" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.15rem;font-weight:600;color:#04474F">释性仁法师</p>
+          <p style="font-size:.85rem;line-height:1.7;color:#4A5A5F;margin-top:4px">灵山美佛寺住持<br>养心院发起人</p>
+          <p lang="en" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72;margin-top:10px">《共建洛杉矶灵山美佛寺养心院缘起与倡议》摘要</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:34em">
+        <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;text-wrap:balance">悲愿缘起</h2>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">多年弘法中，我亲见一位法师在普通养老院往生时无人照料，形销骨立；更见诸多老人晚年孤苦，无素食、无佛号，在恐惧中走完人生。犹记一位同修法师往生后，其年迈母亲顿失依怙，幸得道场养老院收留方得安顿。</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">这使我深切体悟：佛教养老院不仅是安身之所，更是践行慈悲、圆满菩萨道的重要道场。有法师助念开示，对往生者临命终时起到镇定安心的作用，帮助成就往生。这是我成立养心院的缘起和初衷。</p>
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:4px 0 0;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">所谓的守护，原来不是高举火把照亮远方，而是俯下身体，让微光恰好照见眼前那张需要温暖的脸。
+          <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— 性仁法师</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:26px;margin-top:72px;padding-top:44px;border-top:1px solid rgba(4,71,79,.18)">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+        <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.25rem;line-height:1.6;color:#04474F;text-wrap:pretty">「护理、念佛、助念、关怀、往生」一体化的清净家园</p>
+        <p lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Five Commitments</p>
+      </div>
+      <ol style="list-style:none;display:flex;flex-direction:column">
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">01</span>
+          <span style="display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline">
+            <span style="flex:0 0 auto;min-width:9em;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">日常生活照顾护理</span>
+            <span style="flex:1 1 15em;font-size:.95rem;line-height:1.75;color:#33454B">起居、饮食、医护与无障碍照护，全素饮食。</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">02</span>
+          <span style="display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline">
+            <span style="flex:0 0 auto;min-width:9em;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">念佛共修道场</span>
+            <span style="flex:1 1 15em;font-size:.95rem;line-height:1.75;color:#33454B">每日佛号不断，营造清净的修行环境。</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">03</span>
+          <span style="display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline">
+            <span style="flex:0 0 auto;min-width:9em;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">临终助念驿站</span>
+            <span style="flex:1 1 15em;font-size:.95rem;line-height:1.75;color:#33454B">提供专业助念与临终关怀，帮助安详往生。</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">04</span>
+          <span style="display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline">
+            <span style="flex:0 0 auto;min-width:9em;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">慈悲安养港湾</span>
+            <span style="flex:1 1 15em;font-size:.95rem;line-height:1.75;color:#33454B">兼具佛法开示、心理疏导与病苦关怀。</span>
+          </span>
+        </li>
+        <li style="display:grid;grid-template-columns:2.2em minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(4,71,79,.18);border-bottom:1px solid rgba(4,71,79,.18)">
+          <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">05</span>
+          <span style="display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline">
+            <span style="flex:0 0 auto;min-width:9em;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">海外佛子福音</span>
+            <span style="flex:1 1 15em;font-size:.95rem;line-height:1.75;color:#33454B">解决老无所依、往生无助的困境，让修行有所归宿。</span>
+          </span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="funds" style="padding:92px 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;font-weight:600;color:#04474F">捐款如何用于养心院</span>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Where Your Gift Goes</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:60px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:34em">
+        <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;text-wrap:balance">专款专用</h2>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">基金会现已在运作当中。捐款请直接开给基金会，支票寄到新道场即可。我们收到善款，就会<b style="font-weight:700;border-bottom:3px solid #FFD12C;padding-bottom:1px">专款专用</b>，全数用于养心院的筹建与营运。</p>
+        <dl style="display:flex;flex-direction:column;gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">建筑与装修</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">主体工程、室内装修、防火与消防设施。</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">医疗与无障碍设施</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">护理站设備、呼叫系统、电梯、坡道与扶手。</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">审批与专业顾问</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">卫生、消防、环保等部门的申请程序，及法律与政策顾问。</dd>
+          </div>
+          <div style="background:#FBFAF7;padding:24px 26px">
+            <dt style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.1rem;font-weight:600;color:#04474F">长期营运</dt>
+            <dd style="font-size:.95rem;line-height:1.75;color:#33454B;margin-top:8px">医护与护理人力、厨务、关怀义工的稳定经费。</dd>
+          </div>
+        </dl>
+        <p style="font-size:.9rem;line-height:1.85;color:#4A5A5F">星星之火基金会为独立之 <span lang="en">501(c)(3)</span> 公益组织，<span lang="en">EIN 37-1483029</span>，捐款可依法申报抵税。</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div style="border:1px solid rgba(4,71,79,.22);background:#F3EFE7;padding:32px 30px;display:flex;flex-direction:column;gap:22px">
+          <p lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Donation Details</p>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F">支票抬头　<span lang="en">Payable to</span></p>
+            <p lang="en" style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.15rem;line-height:1.5;color:#04474F;margin-top:4px">Beacon Star Foundation</p>
+          </div>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F">邮寄地址　<span lang="en">Mailing Address</span></p>
+            <p lang="en" style="font-size:1rem;line-height:1.7;color:#16262B;margin-top:4px">1478 E. Holt Ave<br>Covina, CA 91724</p>
+          </div>
+          <div>
+            <p style="font-size:.8rem;color:#4A5A5F"><span lang="en">Zelle Pay</span></p>
+            <p style="margin-top:4px"><a lang="en" href="./Senior-Living.dc.html" style="font-size:.95rem;color:#04474F;border-bottom:1px solid rgba(4,71,79,.35);word-break:break-all">beaconstarfoundation@gmail.com</a></p>
+          </div>
+          <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;justify-content:center;min-height:56px;padding:14px 28px;font-size:1rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">前往捐献护持</a>
+        </div>
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:0;font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">你今天捐一块钱，出一分力量，念一声佛号，甚至做一个回向——这些都是星星之火。
+          <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— 性仁法师</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="talent" style="padding:92px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;font-weight:600;color:#04474F">诚征护持人才</span>
+      <span lang="en" style="font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#2F6B72">Join Us</span>
+    </div>
+    <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.4;color:#04474F;max-width:22em;margin-bottom:44px;text-wrap:balance">养心院需结合众人之力，诚邀：</h2>
+    <dl style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">专业与营运</span>
+          <span lang="en" style="font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72">Expertise</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>熟悉养老院法规的法律与政策顾问</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">具老年服务、非营利运营经验的管理人才</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">建筑与空间规划专业人士</span>
+        </dd>
+      </div>
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">医护与照顾</span>
+          <span lang="en" style="font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72">Care</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>医生、护士、护理人员</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">厨务人员</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">清洁人员</span>
+        </dd>
+      </div>
+      <div style="background:#F3EFE7;padding:28px 26px;display:flex;flex-direction:column;gap:14px">
+        <dt style="display:flex;flex-direction:column;align-items:flex-start;gap:10px">
+          <span style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.2rem;font-weight:600;color:#04474F;border-bottom:3px solid #FFD12C;padding-bottom:2px">修行与陪伴</span>
+          <span lang="en" style="font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72">Companionship</span>
+        </dt>
+        <dd style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;line-height:1.7;color:#33454B">
+          <span>助念与关怀同修</span>
+          <span style="padding-top:10px;border-top:1px solid rgba(4,71,79,.18)">愿意陪伴长者的心灵义工</span>
+        </dd>
+      </div>
+    </dl>
+    <p style="font-size:1rem;line-height:1.85;color:#33454B;margin-top:36px;max-width:34em;text-wrap:pretty">即便无法参与，也盼望您代为宣传，广结善缘。</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+      <a href="mailto:info@meifo.org?subject=%E9%A4%8A%E5%BF%83%E9%99%A2%E8%AD%B7%E6%8C%81%E4%BA%BA%E6%89%8D" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">报名护持</a>
+      <a href="tel:+16262134563" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">电话(626) 213-4563</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:88px 0">
+  <div style="max-width:820px;margin:0 auto;padding:0 28px;text-align:center">
+    <h2 style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.45;color:#04474F;text-wrap:balance">建养心院比建寺更难，这是一项永续的法身工程。</h2>
+    <p style="font-size:1rem;line-height:1.85;color:#33454B;margin-top:22px;text-wrap:pretty">有財力者，请布施助建；具专业背景者，请加入护持；人脉广者，请代为宣传；心怀慈悲者，请回向祈愿。</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px">
+      <a href="./星星之火基金会-首页-v4.dc.html#support" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">护持养心院</a>
+      <a href="./缘起故事.dc.html" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">读缘起故事</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#03323A;color:rgba(255,255,255,.88);font-size:.9rem;line-height:1.85">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;flex-direction:column;gap:40px;padding:64px 0 48px">
+      <div data-fbrand="">
+        <p style="font-family:'Noto Serif SC','Songti SC','SimSun',serif;font-size:1.05rem;color:#fff">星星之火基金会</p>
+        <p lang="en" style="font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:16px">Beacon Star Foundation</p>
+        <p style="font-size:.85rem;line-height:1.85">1478 E. Holt Ave<br>Covina, CA 91724, U.S.A.</p>
+        <p style="display:flex;flex-direction:column;gap:4px;margin-top:10px">
+          <a href="tel:+16262134563" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">(626) 213-4563</a>
+          <a href="mailto:info@meifo.org" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">info@meifo.org</a>
+        </p>
+      </div>
+      <div data-flinks="">
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">认识我们</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./缘起故事.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">缘起故事</a></li>
+          <li><a href="./缘起故事.dc.html#name" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">法师的话</a></li>
+          <li><a href="./工作团队.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">工作团队</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">养心院</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./养心院.dc.html#vision" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">愿景与宗旨</a></li>
+          <li><a href="./养心院.dc.html#funds" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">捐款用途</a></li>
+          <li><a href="./养心院.dc.html#talent" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">诚征护持人才</a></li>
+          <li><a href="./星星之火基金会-首页-v4.dc.html#progress" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">筹建进度</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">关联机构</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="https://meifo.org" target="_blank" rel="noopener" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">灵山美佛寺 meifo.org</a></li>
+          <li><a href="./星星之火基金会-首页-v4.dc.html#contact" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">订阅电子报</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.18);padding:28px 0 44px">
+      <p style="max-width:56em;font-size:.8rem;line-height:1.85;color:rgba(255,255,255,.8)">星星之火基金会（<span lang="en">Beacon Star Foundation</span>）为独立之 <span lang="en">501(c)(3)</span> 公益组织，<span lang="en">EIN 37-1483029</span>。本会由灵山美佛寺（<span lang="en">American Buddhist Fellowship</span>）发起护持，两者各为独立之法律主体。养心院独立经营、独立管理。</p>
+      <p style="margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.8)">© 2026 <span lang="en">Beacon Star Foundation</span></p>
+    </div>
+  </div>
+</footer>
+
+<div data-mobilebar="" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;background:rgba(251,250,247,.96);border-top:1px solid rgba(4,71,79,.2);gap:10px">
+  <a href="./星星之火基金会-首页-v4.dc.html#support" style="flex:2;display:flex;align-items:center;justify-content:center;min-height:56px;background:#04474F;color:#fff;font-size:1rem;font-weight:500">护持养心院</a>
+  <a href="tel:+16262134563" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:56px;color:#04474F;border:1px solid #04474F;font-size:1rem;font-weight:500">电话</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { aboutOpen: false, menuOpen: false, mode: 'wide', slide: 0 };
+
+  componentDidMount() {
+    this.onResize = () => {
+      const w = window.innerWidth;
+      const mode = w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide');
+      if (mode !== this.state.mode) this.setState({ mode, menuOpen: false, aboutOpen: false });
+      this.syncHeader(mode);
+    };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    this.onDocClick = (e) => {
+      if (!e.target.closest) return;
+      if (this.state.aboutOpen && !e.target.closest('[data-nav-group]')) this.setState({ aboutOpen: false });
+      if (this.state.menuOpen && e.target.closest('header nav a')) this.setState({ menuOpen: false });
+    };
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.aboutOpen) this.setState({ aboutOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+    this.syncSlides();
+    this.startCarousel();
+  }
+  componentDidUpdate() { this.syncHeader(); this.syncSlides(); }
+
+  startCarousel() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const fig = document.querySelector('figure [data-slide]');
+    const host = fig && fig.parentElement;
+    if (host && !host.dataset.bound) {
+      host.dataset.bound = '1';
+      host.addEventListener('mouseenter', () => { this.paused = true; });
+      host.addEventListener('mouseleave', () => { this.paused = false; });
+      host.addEventListener('focusin', () => { this.paused = true; });
+      host.addEventListener('focusout', () => { this.paused = false; });
+    }
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      if (this.paused) return;
+      this.setState(s => ({ slide: s.slide ? 0 : 1 }));
+    }, 6000);
+  }
+
+  syncSlides() {
+    const cur = this.state.slide || 0;
+    document.querySelectorAll('[data-slide]').forEach(el => {
+      el.style.opacity = Number(el.dataset.slide) === cur ? '1' : '0';
+    });
+    document.querySelectorAll('[data-dot]').forEach(dot => {
+      dot.style.background = Number(dot.dataset.dot) === cur ? '#FBFAF7' : 'transparent';
+    });
+  }
+
+  syncImages(mode) {
+    const idx = mode === 'phone' ? 2 : (mode === 'tablet' ? 1 : 0);
+    document.querySelectorAll('[data-ph]').forEach(el => {
+      const specs = (el.getAttribute('data-ph') || '').split('|');
+      const spec = specs[idx] || specs[0] || '1';
+      Object.assign(el.style, { aspectRatio: spec, minHeight: '0px', flex: '0 0 auto', width: '100%' });
+    });
+  }
+
+  measureHeader() {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const h = getComputedStyle(el).position === 'sticky' ? el.offsetHeight : 0;
+    document.documentElement.style.setProperty('--hdr', h + 'px');
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    window.removeEventListener('resize', this.onResize);
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+
+  syncHeader(mode) {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const w = window.innerWidth;
+    const m = mode || (w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide'));
+    const phone = m === 'phone';
+    const nav = el.querySelector('nav');
+    const right = nav && nav.nextElementSibling;
+    const btn = el.querySelector('[data-menu]');
+    const langBar = right && right.querySelector('[role="group"]');
+    const util = el.querySelector('[data-util="lang"]');
+    const open = this.state.menuOpen;
+
+    if (this.observed !== el) {
+      if (this.ro) this.ro.disconnect();
+      this.ro = new ResizeObserver(() => this.measureHeader());
+      this.ro.observe(el);
+      this.observed = el;
+    }
+
+    Object.assign(el.style, { position: phone ? 'static' : 'sticky', top: '0', zIndex: '50' });
+
+    if (nav) {
+      const items = Array.prototype.slice.call(nav.children);
+      Object.assign(nav.style, {
+        position: phone ? 'fixed' : 'static',
+        inset: phone ? '0' : 'auto',
+        zIndex: phone ? '80' : 'auto',
+        background: phone ? '#FBFAF7' : 'transparent',
+        overflowY: phone ? 'auto' : 'visible',
+        order: m === 'wide' ? '2' : '3',
+        flex: m === 'wide' ? '0 1 auto' : (m === 'tablet' ? '0 0 auto' : '0 0 100%'),
+        width: m === 'tablet' ? 'calc(100% + 56px)' : (phone ? '100%' : 'auto'),
+        display: phone ? (open ? 'flex' : 'none') : (m === 'tablet' ? 'grid' : 'flex'),
+        gridTemplateColumns: m === 'tablet' ? 'repeat(' + items.length + ',1fr)' : '',
+        flexDirection: phone ? 'column' : 'row',
+        alignItems: phone ? 'stretch' : 'center',
+        justifyContent: m === 'wide' ? 'flex-end' : (phone ? 'flex-start' : 'space-between'),
+        gap: phone ? '0' : '2px 20px',
+        margin: m === 'tablet' ? '10px -28px -12px' : (m === 'wide' ? '0' : '2px 0 0'),
+        padding: phone ? '124px 24px 40px' : (m === 'tablet' ? '0 28px' : '0')
+      });
+      const wrap = nav.parentElement;
+      if (wrap) {
+        wrap.style.padding = phone ? '18px 20px 14px' : '12px 28px';
+        wrap.style.flexWrap = m === 'wide' ? 'nowrap' : 'wrap';
+      }
+      items.forEach((it, i) => {
+        const group = it.hasAttribute('data-nav-group');
+        const target = group ? it.querySelector('button') : it;
+        if (!target) return;
+        if (group) Object.assign(it.style, {
+          position: phone ? 'static' : 'relative',
+          flexDirection: phone ? 'column' : 'row',
+          alignItems: phone ? 'stretch' : 'center',
+          justifyContent: phone ? 'flex-start' : 'center',
+          justifySelf: 'stretch',
+          width: m === 'wide' ? 'auto' : '100%'
+        });
+        Object.assign(target.style, {
+          minHeight: phone ? '50px' : (m === 'tablet' ? '56px' : '44px'),
+          padding: phone ? '4px 2px' : (m === 'tablet' ? '8px 20px' : '8px 0'),
+          justifyContent: m === 'tablet' ? 'center' : 'flex-start',
+          fontSize: phone ? '.95rem' : '.9rem',
+          fontWeight: m === 'tablet' ? '500' : '400',
+          justifySelf: phone ? 'stretch' : 'center',
+          whiteSpace: 'nowrap',
+          width: phone ? '100%' : 'auto'
+        });
+        const cur = target.hasAttribute('data-current') || target.getAttribute('aria-current') === 'page';
+        if (phone) {
+          target.style.borderBottom = i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)';
+          target.style.borderLeft = cur ? '4px solid #FFD12C' : '4px solid transparent';
+          target.style.paddingLeft = '14px';
+          target.style.color = cur ? '#04474F' : '#16262B';
+        } else {
+          target.style.borderLeft = 'none';
+          target.style.borderBottom = cur ? '3px solid #FFD12C' : '3px solid transparent';
+          if (cur) { target.style.color = '#04474F'; target.style.fontWeight = '600'; }
+        }
+      });
+
+      const dd = nav.querySelector('[data-nav-group] > div');
+      const caret = nav.querySelector('[data-nav-group] button span');
+      if (caret) caret.style.display = phone ? 'none' : 'inline';
+      if (dd) {
+        Object.assign(dd.style, phone ? {
+          position: 'static', display: 'block', minWidth: '0', background: 'transparent',
+          border: 'none', borderBottom: '1px solid rgba(4,71,79,.12)', boxShadow: 'none'
+        } : {
+          position: 'absolute', display: this.state.aboutOpen ? 'block' : 'none', minWidth: '190px',
+          background: '#FBFAF7', border: '1px solid rgba(4,71,79,.22)', boxShadow: '0 12px 28px rgba(4,71,79,.1)'
+        });
+        Array.prototype.forEach.call(dd.querySelectorAll('a'), (a, i) => {
+          const on = a.getAttribute('aria-current') === 'page';
+          Object.assign(a.style, {
+            minHeight: '50px',
+            padding: phone ? '4px 2px 4px 42px' : '10px 20px',
+            fontWeight: on ? '600' : '400',
+            color: on ? '#04474F' : '#33454B',
+            borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
+            background: phone && on ? '#F3EFE7' : 'transparent',
+            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+          });
+        });
+      }
+    }
+    if (right) right.style.order = m === 'wide' ? '3' : '2';
+    const cta = right && right.querySelector('a[href*="#support"]');
+    if (phone) {
+      if (cta) Object.assign(cta.style, { minHeight: '52px', height: '52px', padding: '0 24px' });
+      if (btn) Object.assign(btn.style, { minHeight: '52px', height: '52px', padding: '0 18px' });
+    } else {
+      if (cta) Object.assign(cta.style, { minHeight: '48px', height: 'auto', padding: '10px 26px' });
+      if (btn) Object.assign(btn.style, { minHeight: '48px', height: 'auto', padding: '10px 18px' });
+    }
+    if (btn) {
+      Object.assign(btn.style, phone && open
+        ? { display: 'flex', position: 'fixed', top: '58px', right: '16px', zIndex: '90', background: '#FBFAF7' }
+        : { display: phone ? 'flex' : 'none', position: 'relative', top: 'auto', right: 'auto', zIndex: '90', background: 'transparent' });
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = open ? '✕' : '☰';
+      const label = Array.prototype.find.call(btn.childNodes, n => n.nodeType === 3 && n.textContent.trim());
+      if (label) label.textContent = open ? '关闭' : '选单';
+      btn.setAttribute('aria-label', open ? '关闭选单' : '选单');
+    }
+    document.body.style.overflow = phone && open ? 'hidden' : '';
+    if (langBar) langBar.style.display = phone ? 'none' : 'flex';
+    if (util) Object.assign(util.style, {
+      display: phone ? 'block' : 'none',
+      position: phone && open ? 'fixed' : 'static',
+      top: '0', left: '0', right: '0',
+      zIndex: phone && open ? '85' : 'auto'
+    });
+    const bar = document.querySelector('[data-mobilebar]');
+    if (bar) bar.style.display = 'none';
+    this.syncImages(m);
+    document.body.style.paddingBottom = '';
+    requestAnimationFrame(() => this.measureHeader());
+  }
+
+  renderVals() {
+    return {
+      sel0: (this.state.slide || 0) === 0 ? 'true' : 'false',
+      sel1: (this.state.slide || 0) === 1 ? 'true' : 'false',
+      goto0: () => this.setState({ slide: 0 }),
+      goto1: () => this.setState({ slide: 1 }),
+      aboutExpanded: this.state.aboutOpen ? 'true' : 'false',
+      aboutDisplay: this.state.aboutOpen ? 'block' : 'none',
+      menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      toggleAbout: () => this.setState(s => ({ aboutOpen: !s.aboutOpen })),
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen }))
+    };
+  }
+}
+</script>
+</body>
+</html>

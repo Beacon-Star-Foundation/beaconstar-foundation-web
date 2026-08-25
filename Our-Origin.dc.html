@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{background:#FBFAF7;color:#16262B;margin:0}html{color-scheme:light}footer [data-flinks]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 26px}@media (max-width:699px){footer [data-fbrand]{display:none}footer [data-flinks]{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}}html.om-hold body{opacity:0}html.om-in body{opacity:1;transition:opacity .26s cubic-bezier(.22,.61,.24,1)}@media (prefers-reduced-motion:reduce){html.om-in body{transition:none}}</style>
+<script>(function(){var h=document.documentElement;h.className+=" om-hold";var done=0,mo,cap;function go(){if(done)return;done=1;clearTimeout(cap);if(mo)mo.disconnect();h.className=h.className.replace(" om-hold","")+" om-in";}function ready(){var r=document.getElementById("dc-root");return r&&r.getBoundingClientRect().height>240;}function check(){if(ready())requestAnimationFrame(go);}cap=setTimeout(go,1500);document.addEventListener("DOMContentLoaded",function(){try{mo=new MutationObserver(check);mo.observe(document.body,{childList:true,subtree:true});}catch(e){}check();});})();</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="In 2003, Venerable Elder Zongcai of Pure Land Temple in Los Angeles founded the work that is today Beacon Star Foundation. After his passing, Venerable Xingren Shi took up the lamp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Alegreya+Sans:wght@400;500;700&amp;display=fallback" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:21px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#FBFAF7;color:#16262B;font-family:"Alegreya Sans","Helvetica Neue","PingFang TC","Microsoft JhengHei",-apple-system,"Helvetica Neue",sans-serif;font-size:1rem;line-height:1.75;-webkit-font-smoothing:antialiased;text-spacing-trim:trim-start}
+img{max-width:100%;display:block}
+a{color:#04474F;text-decoration:none}
+a:hover{color:#03323A}
+[id]{scroll-margin-top:calc(var(--hdr, 132px) + 24px)}
+:focus-visible{outline:3px solid #8A6A00;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important}}
+</style>
+</helmet>
+
+<div style="display:flex;flex-direction:column">
+
+<header style="background:#FBFAF7;border-bottom:1px solid rgba(4,71,79,.18)">
+  <div data-util="lang" style="display:none;background:#03323A">
+    <div role="group" aria-label="語言 Language" style="max-width:1140px;margin:0 auto;padding:0 20px;min-height:40px;display:flex;align-items:center;justify-content:flex-end;gap:2px">
+      <a href="./緣起故事.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">繁體</a>
+      <a href="./缘起故事.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.72rem;color:rgba(255,255,255,.82)">简体</a>
+      <a lang="en" href="./Our-Origin.dc.html" style="min-height:40px;padding:0 12px;display:flex;align-items:center;font-size:.7rem;letter-spacing:.03em;color:#fff;background:rgba(255,255,255,.14)" aria-current="page">English</a>
+    </div>
+  </div>
+  <div style="max-width:1140px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:10px 24px;flex-wrap:wrap;justify-content:space-between">
+    <a href="./Beacon-Star-Foundation.dc.html" style="display:flex;align-items:center;gap:14px;flex-shrink:0;min-height:44px">
+      <img src="./logo.png" alt="Beacon Star Foundation logo" style="width:52px;height:52px">
+      <span>
+        <span style="display:block;font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F;line-height:1.3">Beacon Star Foundation</span>
+        <span lang="zh-Hant" style="display:block;font-size:.6rem;letter-spacing:.18em;color:#2F6B72;line-height:1.5">星星之火基金會</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation" style="display:flex;align-items:center;justify-content:flex-end;gap:2px 20px;flex-wrap:wrap">
+      <a href="./Beacon-Star-Foundation.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Home</a>
+      <div data-nav-group="" style="position:relative;display:flex;align-items:center">
+        <button data-current="" type="button" onClick="{{ toggleAbout }}" aria-expanded="{{ aboutExpanded }}" style="display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 14px;font-family:inherit;font-size:.9rem;font-weight:600;color:#04474F;background:transparent;border:none;border-bottom:3px solid #FFD12C;cursor:pointer">About<span aria-hidden="true" style="font-size:.5rem;line-height:1;color:#2F6B72">▼</span></button>
+        <div style="display:{{ aboutDisplay }};position:absolute;top:100%;left:0;min-width:190px;z-index:70;background:#FBFAF7;border:1px solid rgba(4,71,79,.22);box-shadow:0 12px 28px rgba(4,71,79,.1)">
+          <a href="./Our-Origin.dc.html" aria-current="page" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;font-weight:600;color:#04474F">Our Origin</a>
+          <a href="./Our-Team.dc.html" style="display:flex;align-items:center;min-height:50px;padding:10px 20px;font-size:.88rem;color:#33454B;border-top:1px solid rgba(4,71,79,.12)" style-hover="background:#F3EFE7;color:#04474F">Our Team</a>
+        </div>
+      </div>
+      <a href="./Senior-Living.dc.html" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Senior Living</a>
+      <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Donate</a>
+      <a href="./Beacon-Star-Foundation.dc.html#contact" style="display:flex;align-items:center;min-height:44px;padding:8px 14px;font-size:.9rem;color:#16262B;border-bottom:3px solid transparent;transition:color .15s ease,transform .18s ease" style-hover="color:#0A6E79;transform:translateY(-2px)">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap">
+      <div role="group" aria-label="語言 Language" style="display:flex;border:1px solid rgba(4,71,79,.28)">
+        <a href="./緣起故事.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F" style-hover="background:#F3EFE7;color:#04474F">繁</a>
+        <a href="./缘起故事.dc.html" style="min-width:48px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#04474F;border-left:1px solid rgba(4,71,79,.28)" style-hover="background:#F3EFE7;color:#04474F">简</a>
+        <a lang="en" href="./Our-Origin.dc.html" style="min-width:52px;min-height:44px;display:flex;align-items:center;justify-content:center;font-size:.8rem;letter-spacing:.04em;font-weight:700;color:#fff;background:#04474F;border-left:1px solid rgba(4,71,79,.28)" aria-current="page">EN</a>
+      </div>
+      <a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:48px;padding:10px 26px;font-size:.9rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">Support</a>
+      <button data-menu="" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="Menu" style="display:none;align-items:center;gap:8px;min-height:48px;padding:10px 18px;font-family:inherit;font-size:.9rem;font-weight:500;color:#04474F;background:transparent;border:1px solid #04474F;cursor:pointer"><span aria-hidden="true" style="font-size:1.05rem;line-height:1">☰</span>Menu</button>
+    </div>
+  </div>
+</header>
+
+<section style="padding:22px 0 0"><div style="max-width:1140px;margin:0 auto;padding:0 28px">
+  <nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:.72rem;color:#7A878B">
+    <a href="./Beacon-Star-Foundation.dc.html" style="color:#7A878B" style-hover="color:#04474F">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="./Our-Origin.dc.html" style="color:#7A878B" style-hover="color:#04474F">About</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page" style="color:#33454B">Our Origin</span>
+  </nav>
+</div></section>
+
+<section style="padding:38px 0 0">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <h1 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);line-height:1.3;color:#04474F">Our Origin</h1>
+      <span lang="zh-Hant" style="font-size:.7rem;letter-spacing:.2em;color:#2F6B72">緣起故事</span>
+    </div>
+    <p style="font-family:'EB Garamond',Georgia,serif;font-size:clamp(21px,2.3vw,27px);line-height:1.75;color:#04474F;max-width:24em;margin-top:30px;text-wrap:pretty">A lamp kept burning for twenty years. When Venerable Elder Zongcai passed away, Venerable Xingren Shi carried it forward.</p>
+  </div>
+</section>
+
+<section style="padding:52px 0 92px">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:60px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <figure data-ph="4/5|4/5|3/4" style="width:100%;aspect-ratio:4/5;border:1px solid rgba(4,71,79,.14);overflow:hidden;position:relative">
+        <img data-slide="0" src="./zongcai-elder.jpg" alt="Venerable Elder Zongcai standing on a rock beneath the pines of Huangshan, holding a walking stick" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 70%;transform:scale(1.6);transform-origin:52% 70%;opacity:1;transition:opacity .9s ease">
+        <img data-slide="1" src="./zongcai-elder-2-v2.png" alt="Venerable Elder Zongcai seated in meditation in the Buddha hall" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;opacity:0;transition:opacity .9s ease">
+        <figcaption style="position:absolute;right:14px;bottom:12px;max-width:62%;text-align:right;font-size:.68rem;letter-spacing:.06em;line-height:1.35;color:#FBFAF7;z-index:2">Venerable Elder Zongcai</figcaption>
+        <div role="tablist" aria-label="Portrait of the Elder" style="position:absolute;left:0;right:0;bottom:12px;z-index:2;display:flex;justify-content:center;gap:9px">
+          <button data-dot="0" type="button" onClick="{{ goto0 }}" aria-label="Slide 1" aria-selected="{{ sel0 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:#FBFAF7;cursor:pointer"></button>
+          <button data-dot="1" type="button" onClick="{{ goto1 }}" aria-label="Slide 2" aria-selected="{{ sel1 }}" style="width:9px;height:9px;padding:0;border:1px solid rgba(251,250,247,.85);border-radius:50%;background:transparent;cursor:pointer"></button>
+        </div>
+      </figure>
+      <dl style="display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(4,71,79,.14)">
+        <div style="padding:18px 12px 0;border-right:1px solid rgba(4,71,79,.14)">
+          <dd style="font-family:'EB Garamond',Georgia,serif;font-size:1.7rem;line-height:1.2;color:#04474F">20+</dd>
+          <dt style="font-size:.7rem;color:#4A5A5F;margin-top:6px">years of ascetic practice in a mountain hut</dt>
+        </div>
+        <div style="padding:18px 12px 0;border-right:1px solid rgba(4,71,79,.14)">
+          <dd style="font-family:'EB Garamond',Georgia,serif;font-size:1.7rem;line-height:1.2;color:#04474F">2003</dd>
+          <dt style="font-size:.7rem;color:#4A5A5F;margin-top:6px">the year the Foundation was founded</dt>
+        </div>
+        <div style="padding:18px 12px 0">
+          <dd style="font-family:'EB Garamond',Georgia,serif;font-size:1.7rem;line-height:1.2;color:#04474F">103</dd>
+          <dt style="font-size:.7rem;color:#4A5A5F;margin-top:6px">years old at his peaceful passing</dt>
+        </div>
+      </dl>
+    </div>
+    <div style="max-width:34em">
+      <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(28px,3.2vw,38px);line-height:1.35;color:#04474F;margin-bottom:28px;text-wrap:balance">The legacy of Venerable Elder Zongcai</h2>
+      <p style="font-size:1rem;line-height:1.85;text-wrap:pretty">In 2003, Venerable Elder Zongcai of Pure Land Temple in Los Angeles founded the organization that is today Beacon Star Foundation. He practiced with rare diligence all his life, living alone in a mountain hut for two or three decades without once coming down. He lived simply and wasted nothing. He was warm, easy to talk to, and never acted like anyone important.</p>
+      <p style="font-size:1rem;line-height:1.85;margin-top:24px">In 2022 the Elder passed away peacefully, at the age of 103.</p>
+      <p style="font-size:1rem;line-height:1.85;margin-top:24px">After his passing, the organization faced dissolution. Its administrator, the lay devotee Yanjing, asked Venerable Xingren Shi to take it on.</p>
+      <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:38px 0 0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;max-width:22em;text-wrap:pretty;font-weight:700">“Then let me be the one who carries the flame onward, and let all of us keep this lamp burning together.”
+        <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— Venerable Xingren Shi</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="name" style="padding:88px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="border-bottom:1px solid rgba(4,71,79,.18);padding-bottom:16px;margin-bottom:48px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <span style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:#04474F">In His Words</span>
+      <span lang="zh-Hant" style="font-size:.7rem;letter-spacing:.2em;color:#2F6B72">法師的話</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),auto));gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:18px;max-width:240px">
+        <div style="width:180px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid rgba(4,71,79,.14)">
+          <img src="./team-xingren-sq.png" alt="Venerable Xingren Shi" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div>
+          <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;font-weight:600;color:#04474F">Venerable Xingren Shi</p>
+          <p style="font-size:.85rem;line-height:1.7;color:#4A5A5F;margin-top:4px">Abbot &amp; President, American Buddhist Fellowship<br>Founder, Beacon Star Foundation</p>
+          <p lang="en" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#2F6B72;margin-top:10px">Aug 2026 · Excerpts from a Dharma talk</p>
+        </div>
+      </div>
+      <div style="max-width:34em;display:flex;flex-direction:column;gap:22px">
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">The beacon still stands, but the one who keeps it must pass the flame on. Let me be the one who carries it forward.
+          <cite style="display: block; margin-top: 16px; font-family: inherit; font-style: normal; font-size: 0.85rem; font-weight: 400; color: rgb(74, 90, 95);">— Venerable Xingren Shi</cite>
+        </blockquote>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The Dharma is like a lighthouse on the open sea: it shows the lost their way, it gives light, it gives hope. And the small kindness and aspiration each of us carries is like a star in the night sky — seemingly insignificant, yet always shining. That was the Elder’s original intention in founding this work.</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">After the Elder passed away, the organization was to be dissolved. Yanjing, who was administering it, asked whether I would take it on, and I gladly agreed. The Elder had spent his whole life lighting a single beacon. I kept the English name unchanged, to carry on what he left us; the Chinese name I changed to Xingxing Zhi Huo (<span lang="zh-Hant">星星之火</span>), “a single spark,” to open a new hope for what comes next.</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The name comes from a teaching on the four small things that must not be underestimated. In the Āgama sūtras the Buddha cautions us that four things in this world should never be taken lightly:</p>
+        <ol style="list-style:none;display:flex;flex-direction:column;gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
+          <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
+            <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">01</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B"><b style="font-family:'EB Garamond',Georgia,serif;color:#04474F">A young dragon</b>　small now, but grown it can overturn rivers and seas.</span>
+          </li>
+          <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
+            <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">02</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B"><b style="font-family:'EB Garamond',Georgia,serif;color:#04474F">A young prince</b>　a child still, but of royal blood, and one day he will take the throne.</span>
+          </li>
+          <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
+            <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">03</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B"><b style="font-family:'EB Garamond',Georgia,serif;color:#04474F">A young novice</b>　junior in years, but with diligent practice he will in time realize the path.</span>
+          </li>
+          <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
+            <span lang="en" style="font-size:.8rem;font-weight:700;letter-spacing:.1em;color:#B08900">04</span>
+            <span style="font-size:.95rem;line-height:1.75;color:#33454B"><b style="font-family:'EB Garamond',Georgia,serif;color:#04474F">A Spark</b>　the smallest flame is not to be dismissed; a spark can set a whole plain alight.</span>
+          </li>
+        </ol>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">We chose the name as a reminder: never hold back because your own strength seems small, never pass over a good deed because it seems minor. A dollar given today, an hour of help, a single recitation of the Buddha’s name, even a dedication of merit that the home may be completed sooner — each of these is a spark. When thousands upon thousands of us do the same, that small fire is enough to burn away the world’s indifference, its selfishness, its unknowing dark.</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The Elder’s wish was this: light reflecting light, lamp passing to lamp, one beam taking up where another leaves off. Then the setting sun is no longer an ending, but the dawn of another kind of meaning. May each of us, under the light of the Dharma’s beacon, become one who keeps the lamp — a star that shines, a lamp that burns itself to light the way for others.</p>
+        <blockquote style="border-left:3px solid #FFD12C;padding:8px 0 8px 26px;margin:12px 0 0;font-family:'EB Garamond',Georgia,serif;font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.7;color:#04474F;text-wrap:pretty">I seek no comfort for myself; may all beings be freed from suffering.</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:88px 0">
+  <div style="max-width:820px;margin:0 auto;padding:0 28px;text-align:center">
+    <h2 style="font-family:'EB Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,3vw,34px);line-height:1.45;color:#04474F;text-wrap:balance">The mission now is a home where monks, nuns, and lifelong lay devotees can grow old peacefully, in a place of practice.</h2>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px">
+      <a href="./Senior-Living.dc.html" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;background:#04474F;color:#fff;border:1px solid #04474F" style-hover="background:#03323A;color:#fff">Explore Senior Living</a>
+      <a href="./Our-Team.dc.html" style="display:flex;align-items:center;min-height:56px;padding:14px 32px;font-size:1rem;font-weight:500;color:#04474F;border:1px solid #04474F" style-hover="background:#04474F;color:#fff">Meet the team</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#03323A;color:rgba(255,255,255,.88);font-size:.9rem;line-height:1.85">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="display:flex;flex-direction:column;gap:40px;padding:64px 0 48px">
+      <div data-fbrand="">
+        <p style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;color:#fff">Beacon Star Foundation</p>
+        <p lang="zh-Hant" style="font-size:.7rem;letter-spacing:.18em;color:rgba(255,255,255,.7);margin-bottom:16px">星星之火基金會</p>
+        <p style="font-size:.85rem;line-height:1.85">1478 E. Holt Ave<br>Covina, CA 91724, U.S.A.</p>
+        <p style="display:flex;flex-direction:column;gap:4px;margin-top:10px">
+          <a href="tel:+16262134563" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">(626) 213-4563</a>
+          <a href="mailto:info@meifo.org" style="display:inline-flex;align-items:center;min-height:44px;color:#fff;border-bottom:1px solid rgba(255,209,44,.5)" style-hover="color:#FFD12C">info@meifo.org</a>
+        </p>
+      </div>
+      <div data-flinks="">
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">About us</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./Our-Origin.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Our Origin</a></li>
+          <li><a href="./Our-Origin.dc.html#name" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Our Name</a></li>
+          <li><a href="./Our-Team.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Our Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">Senior Living</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="./Senior-Living.dc.html" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Vision &amp; Plan</a></li>
+          <li><a href="./Beacon-Star-Foundation.dc.html#progress" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Progress</a></li>
+          <li><a href="./Beacon-Star-Foundation.dc.html#support" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:.75rem;font-weight:700;letter-spacing:.18em;color:#FFD12C;text-transform:uppercase;margin-bottom:14px">Affiliated</h2>
+        <ul style="list-style:none;display:flex;flex-direction:column">
+          <li><a href="https://meifo.org" target="_blank" rel="noopener" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Meifo Temple · meifo.org</a></li>
+          <li><a href="./Beacon-Star-Foundation.dc.html#contact" style="display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.9)" style-hover="color:#FFD12C">Newsletter</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.18);padding:28px 0 44px">
+      <p style="max-width:56em;font-size:.8rem;line-height:1.85;color:rgba(255,255,255,.8)">Beacon Star Foundation is an independent 501(c)(3) nonprofit organization, EIN 37-1483029. The Foundation was initiated and is supported by Meifo Temple (American Buddhist Fellowship); the two remain separate legal entities.</p>
+      <p style="margin-top:14px;font-size:.8rem;color:rgba(255,255,255,.8)">© 2026 Beacon Star Foundation</p>
+    </div>
+  </div>
+</footer>
+
+<div data-mobilebar="" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px;background:rgba(251,250,247,.96);border-top:1px solid rgba(4,71,79,.2);gap:10px">
+  <a href="./Beacon-Star-Foundation.dc.html#support" style="flex:2;display:flex;align-items:center;justify-content:center;min-height:56px;background:#04474F;color:#fff;font-size:1rem;font-weight:500">Support the Home</a>
+  <a href="tel:+16262134563" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:56px;color:#04474F;border:1px solid #04474F;font-size:1rem;font-weight:500">Call</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { aboutOpen: false, menuOpen: false, mode: 'wide', slide: 0 };
+
+  componentDidMount() {
+    this.onResize = () => {
+      const w = window.innerWidth;
+      const mode = w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide');
+      if (mode !== this.state.mode) this.setState({ mode, menuOpen: false, aboutOpen: false });
+      this.syncHeader(mode);
+    };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    this.onDocClick = (e) => {
+      if (!e.target.closest) return;
+      if (this.state.aboutOpen && !e.target.closest('[data-nav-group]')) this.setState({ aboutOpen: false });
+      if (this.state.menuOpen && e.target.closest('header nav a')) this.setState({ menuOpen: false });
+    };
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.aboutOpen) this.setState({ aboutOpen: false }); };
+    document.addEventListener('click', this.onDocClick);
+    document.addEventListener('keydown', this.onKey);
+    this.syncSlides();
+    this.startCarousel();
+  }
+  componentDidUpdate() { this.syncHeader(); this.syncSlides(); }
+
+  /* two-photo carousel: cross-fade, auto-advance, pauses on hover/focus
+     and when the reader prefers reduced motion */
+  startCarousel() {
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (still) return;
+    const fig = document.querySelector('figure [data-slide]');
+    const host = fig && fig.parentElement;
+    if (host && !host.dataset.bound) {
+      host.dataset.bound = '1';
+      host.addEventListener('mouseenter', () => { this.paused = true; });
+      host.addEventListener('mouseleave', () => { this.paused = false; });
+      host.addEventListener('focusin', () => { this.paused = true; });
+      host.addEventListener('focusout', () => { this.paused = false; });
+    }
+    clearInterval(this.timer);
+    this.timer = setInterval(() => {
+      if (this.paused) return;
+      this.setState(s => ({ slide: s.slide ? 0 : 1 }));
+    }, 6000);
+  }
+
+  syncSlides() {
+    const cur = this.state.slide || 0;
+    document.querySelectorAll('[data-slide]').forEach(img => {
+      img.style.opacity = Number(img.dataset.slide) === cur ? '1' : '0';
+    });
+    document.querySelectorAll('[data-dot]').forEach(dot => {
+      const on = Number(dot.dataset.dot) === cur;
+      dot.style.background = on ? '#FBFAF7' : 'transparent';
+    });
+  }
+
+  /* one ratio system for every image slot: data-ph="wide|tablet|phone" */
+  syncImages(mode) {
+    const idx = mode === 'phone' ? 2 : (mode === 'tablet' ? 1 : 0);
+    document.querySelectorAll('[data-ph]').forEach(el => {
+      const specs = (el.getAttribute('data-ph') || '').split('|');
+      const spec = specs[idx] || specs[0] || '1';
+      Object.assign(el.style, { aspectRatio: spec, minHeight: '0px', flex: '0 0 auto', width: '100%' });
+    });
+  }
+
+  measureHeader() {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const h = getComputedStyle(el).position === 'sticky' ? el.offsetHeight : 0;
+    document.documentElement.style.setProperty('--hdr', h + 'px');
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    window.removeEventListener('resize', this.onResize);
+    document.removeEventListener('click', this.onDocClick);
+    document.removeEventListener('keydown', this.onKey);
+  }
+
+  /* same three header layouts as the homepage: wide = one row; tablet = nav on
+     row 2 under a hairline; phone = nav behind Menu, header unsticks */
+  syncHeader(mode) {
+    const el = document.querySelector('header');
+    if (!el) return;
+    const w = window.innerWidth;
+    const m = mode || (w < 700 ? 'phone' : (w < 1180 ? 'tablet' : 'wide'));
+    const phone = m === 'phone';
+    const nav = el.querySelector('nav');
+    const right = nav && nav.nextElementSibling;
+    const btn = el.querySelector('[data-menu]');
+    const langBar = right && right.querySelector('[role="group"]');
+    const util = el.querySelector('[data-util="lang"]');
+    const open = this.state.menuOpen;
+
+    if (this.observed !== el) {
+      if (this.ro) this.ro.disconnect();
+      this.ro = new ResizeObserver(() => this.measureHeader());
+      this.ro.observe(el);
+      this.observed = el;
+    }
+
+    Object.assign(el.style, { position: phone ? 'static' : 'sticky', top: '0', zIndex: '50' });
+
+    if (nav) {
+      const items = Array.prototype.slice.call(nav.children);
+      Object.assign(nav.style, {
+        position: phone ? 'fixed' : 'static',
+        inset: phone ? '0' : 'auto',
+        zIndex: phone ? '80' : 'auto',
+        background: phone ? '#FBFAF7' : 'transparent',
+        overflowY: phone ? 'auto' : 'visible',
+        order: m === 'wide' ? '2' : '3',
+        flex: m === 'wide' ? '0 1 auto' : (m === 'tablet' ? '0 0 auto' : '0 0 100%'),
+        width: m === 'tablet' ? 'calc(100% + 56px)' : (phone ? '100%' : 'auto'),
+        display: phone ? (open ? 'flex' : 'none') : (m === 'tablet' ? 'grid' : 'flex'),
+        gridTemplateColumns: m === 'tablet' ? 'repeat(' + items.length + ',1fr)' : '',
+        flexDirection: phone ? 'column' : 'row',
+        alignItems: phone ? 'stretch' : 'center',
+        justifyContent: m === 'wide' ? 'flex-end' : (phone ? 'flex-start' : 'space-between'),
+        gap: phone ? '0' : '2px 20px',
+        margin: m === 'tablet' ? '10px -28px -12px' : (m === 'wide' ? '0' : '2px 0 0'),
+        padding: phone ? '124px 24px 40px' : (m === 'tablet' ? '0 28px' : '0')
+      });
+      const wrap = nav.parentElement;
+      if (wrap) {
+        wrap.style.padding = phone ? '18px 20px 14px' : '12px 28px';
+        wrap.style.flexWrap = m === 'wide' ? 'nowrap' : 'wrap';
+      }
+      items.forEach((it, i) => {
+        const group = it.hasAttribute('data-nav-group');
+        const target = group ? it.querySelector('button') : it;
+        if (!target) return;
+        if (group) Object.assign(it.style, {
+          position: phone ? 'static' : 'relative',
+          flexDirection: phone ? 'column' : 'row',
+          alignItems: phone ? 'stretch' : 'center',
+          justifyContent: phone ? 'flex-start' : 'center',
+          justifySelf: 'stretch',
+          width: m === 'wide' ? 'auto' : '100%'
+        });
+        Object.assign(target.style, {
+          minHeight: phone ? '50px' : (m === 'tablet' ? '56px' : '44px'),
+          padding: phone ? '4px 2px' : (m === 'tablet' ? '8px 20px' : '8px 0'),
+          justifyContent: m === 'tablet' ? 'center' : 'flex-start',
+          fontSize: phone ? '.95rem' : '.9rem',
+          fontWeight: m === 'tablet' ? '500' : '400',
+          justifySelf: phone ? 'stretch' : 'center',
+          whiteSpace: 'nowrap',
+          width: phone ? '100%' : 'auto'
+        });
+        if (!group) target.style.borderBottom = phone
+          ? (i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)')
+          : '3px solid transparent';
+        const cur = target.hasAttribute('data-current') || target.getAttribute('aria-current') === 'page';
+        if (phone) {
+          target.style.borderBottom = i === items.length - 1 ? '1px solid transparent' : '1px solid rgba(4,71,79,.12)';
+          target.style.borderLeft = cur ? '4px solid #FFD12C' : '4px solid transparent';
+          target.style.paddingLeft = '14px';
+          target.style.color = cur ? '#04474F' : '#16262B';
+        } else {
+          target.style.borderLeft = 'none';
+          target.style.borderBottom = cur ? '3px solid #FFD12C' : '3px solid transparent';
+        }
+      });
+
+      const dd = nav.querySelector('[data-nav-group] > div');
+      const caret = nav.querySelector('[data-nav-group] button span');
+      if (caret) caret.style.display = phone ? 'none' : 'inline';
+      if (dd) {
+        Object.assign(dd.style, phone ? {
+          position: 'static', display: 'block', minWidth: '0', background: 'transparent',
+          border: 'none', borderBottom: '1px solid rgba(4,71,79,.12)', boxShadow: 'none'
+        } : {
+          position: 'absolute', display: this.state.aboutOpen ? 'block' : 'none', minWidth: '190px',
+          background: '#FBFAF7', border: '1px solid rgba(4,71,79,.22)', boxShadow: '0 12px 28px rgba(4,71,79,.1)'
+        });
+        Array.prototype.forEach.call(dd.querySelectorAll('a'), (a, i) => {
+          const on = a.getAttribute('aria-current') === 'page';
+          Object.assign(a.style, {
+            minHeight: '50px',
+            padding: phone ? '4px 2px 4px 42px' : '10px 20px',
+            fontWeight: on ? '600' : '400',
+            color: on ? '#04474F' : '#33454B',
+            borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
+            background: phone && on ? '#F3EFE7' : 'transparent',
+            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+          });
+        });
+        const childOn = !!dd.querySelector('[aria-current="page"]');
+        if (phone && childOn) {
+          const gb = nav.querySelector('[data-nav-group] button');
+          if (gb) { gb.style.borderLeft = '4px solid transparent'; gb.style.fontWeight = '400'; }
+        }
+      }
+    }
+    if (right) right.style.order = m === 'wide' ? '3' : '2';
+    const cta = right && right.querySelector('a[href*="#support"]');
+    if (phone) {
+      if (cta) Object.assign(cta.style, { minHeight: '52px', height: '52px', padding: '0 24px' });
+      if (btn) Object.assign(btn.style, { minHeight: '52px', height: '52px', padding: '0 18px' });
+    } else {
+      if (cta) Object.assign(cta.style, { minHeight: '48px', height: 'auto', padding: '10px 26px' });
+      if (btn) Object.assign(btn.style, { minHeight: '48px', height: 'auto', padding: '10px 18px' });
+    }
+    if (btn) {
+      Object.assign(btn.style, phone && open
+        ? { display: 'flex', position: 'fixed', top: '58px', right: '16px', zIndex: '90', background: '#FBFAF7' }
+        : { display: phone ? 'flex' : 'none', position: 'relative', top: 'auto', right: 'auto', zIndex: '90', background: 'transparent' });
+      const icon = btn.querySelector('span');
+      if (icon) icon.textContent = open ? '✕' : '☰';
+      const label = Array.prototype.find.call(btn.childNodes, n => n.nodeType === 3 && n.textContent.trim());
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    }
+    document.body.style.overflow = phone && open ? 'hidden' : '';
+    if (langBar) langBar.style.display = phone ? 'none' : 'flex';
+    if (util) Object.assign(util.style, {
+      display: phone ? 'block' : 'none',
+      position: phone && open ? 'fixed' : 'static',
+      top: '0', left: '0', right: '0',
+      zIndex: phone && open ? '85' : 'auto'
+    });
+    const bar = document.querySelector('[data-mobilebar]');
+    if (bar) bar.style.display = 'none';
+    this.syncImages(m);
+    document.body.style.paddingBottom = '';
+    requestAnimationFrame(() => this.measureHeader());
+  }
+
+  renderVals() {
+    return {
+      sel0: (this.state.slide || 0) === 0 ? 'true' : 'false',
+      sel1: (this.state.slide || 0) === 1 ? 'true' : 'false',
+      goto0: () => this.setState({ slide: 0 }),
+      goto1: () => this.setState({ slide: 1 }),
+      aboutExpanded: this.state.aboutOpen ? 'true' : 'false',
+      aboutDisplay: this.state.aboutOpen ? 'block' : 'none',
+      menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      toggleAbout: () => this.setState(s => ({ aboutOpen: !s.aboutOpen })),
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen }))
+    };
+  }
+}
+</script>
+</body>
+</html>
+

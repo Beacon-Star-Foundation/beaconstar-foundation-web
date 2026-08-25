@@ -14,7 +14,15 @@ Each page exists in English, Traditional Chinese, and Simplified Chinese:
 | Senior Living | `Senior-Living.dc.html` | `養心院.dc.html` | `养心院.dc.html` |
 | Team | `Our-Team.dc.html` | `工作團隊.dc.html` | `工作团队.dc.html` |
 
-`index.html` redirects to the Traditional Chinese home page. `support.js` is the shared
+`index.html` **is** the Traditional Chinese home page — a byte-for-byte copy
+of `星星之火基金會-首頁-v4.dc.html`, so the root URL serves it with no redirect.
+**If you edit one, copy it over the other**, or the two will drift:
+
+```
+cp 星星之火基金會-首頁-v4.dc.html index.html
+```
+
+Both carry `rel="canonical"` pointing at the root. `support.js` is the shared
 runtime the pages load; every page needs it.
 
 ## Preview locally

@@ -470,7 +470,7 @@ class Component extends DCLogic {
     clearInterval(this.slideTimer);
     this.slideTimer = setInterval(() => {
       if (!this.paused) this.setState(s => ({ slide: s.slide ? 0 : 1 }));
-    }, 9000);
+    }, 6000);
 
     const pfirst = document.querySelector('[data-pslide]');
     const phost = pfirst && pfirst.closest('div');
@@ -484,7 +484,7 @@ class Component extends DCLogic {
     clearInterval(this.planTimer);
     this.planTimer = setInterval(() => {
       if (!this.ppaused) this.setPlanSlide(this.pcur ? 0 : 1);
-    }, 9000);
+    }, 6000);
   }
 
   /* the site-plan carousel is driven straight from the DOM, never from state:

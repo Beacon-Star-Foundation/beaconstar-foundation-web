@@ -2,3 +2,6 @@
 
 # Claude Design canvas metadata
 .thumbnail
+
+# Photo mocks for review, not part of the site
+mock/

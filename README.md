@@ -32,6 +32,20 @@ cp home-trad.html index.html
 Both carry `rel="canonical"` pointing at the root. `support.js` is the shared
 runtime; every page needs it.
 
+## Footer
+
+The footer is one component, not thirteen copies. `partials/footer.html` holds
+the markup (with `%%token%%` placeholders); the per-language strings live in
+`tools/sync-footer.mjs`. Edit those, then push the result into every page:
+
+```
+node tools/sync-footer.mjs
+```
+
+The script replaces each page's `<footer>…</footer>` and its two
+`footer [data-flinks]{…}` rules. Never hand-edit a footer in a page file — the
+next sync overwrites it.
+
 ## Preview locally
 
 ```

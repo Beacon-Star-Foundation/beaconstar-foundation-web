@@ -263,6 +263,30 @@ a:hover{color:#03323A}
   </div>
 </section>
 
+<section id="video" style="padding:76px 0;background:#F3EFE7;border-top:1px solid rgba(4,71,79,.1);border-bottom:1px solid rgba(4,71,79,.1)">
+  <div style="max-width:1140px;margin:0 auto;padding:0 28px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:26px 56px;align-items:center">
+      <button type="button" data-video="M6SLBMiddHI" aria-label="播放影片：基金會緣起" style="position:relative;display:block;width:100%;aspect-ratio:16/9;background:#04474F;border:1px solid rgba(4,71,79,.14);padding:0;font:inherit;overflow:hidden;cursor:pointer">
+        <img src="https://i.ytimg.com/vi/M6SLBMiddHI/maxresdefault.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(4,71,79,.22)">
+          <span style="width:84px;height:84px;border-radius:50%;background:#FFD12C;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(4,71,79,.32)">
+            <span style="width:0;height:0;border-left:25px solid #04474F;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px"></span>
+          </span>
+        </span>
+      </button>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+          <span style="font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:600;color:#04474F">影音開示</span>
+          <span lang="en" style="font-size:.7rem;letter-spacing:.2em;color:#2F6B72">Talks &amp; Videos</span>
+        </div>
+        <h2 style="font-family:'Noto Serif TC',serif;font-weight:600;font-size:clamp(26px,2.8vw,34px);line-height:1.4;color:#04474F;margin-top:20px;text-wrap:balance">聽法師親口說基金會緣起</h2>
+        <p style="font-size:1rem;line-height:1.8;color:#33454B;margin-top:16px;max-width:26em;text-wrap:pretty">Let Your Heart Be Touched 讓我們大家一起來延續這一盞明燈，照亮世間黑暗的每一個角落！</p>
+        <a href="./videos-trad.html" style="display:inline-flex;align-items:center;min-height:48px;margin-top:22px;font-size:.9rem;color:#04474F;border-bottom:2px solid rgba(4,71,79,.25)" style-hover="border-bottom-color:#04474F">觀看全部影音開示 &nbsp;&rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="support" style="padding:92px 0;background:#04474F;color:#fff">
   <div style="max-width:1140px;margin:0 auto;padding:0 28px">
     <div style="border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:16px;margin-bottom:52px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
@@ -808,6 +832,24 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+(function(){
+  function play(host){
+    if(host.dataset.loaded) return;
+    var id=host.getAttribute('data-video');
+    host.dataset.loaded='1'; host.style.cursor='default'; host.innerHTML='';
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+    f.title='YouTube'; f.allowFullscreen=true;
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture';
+    f.style.cssText='width:100%;height:100%;border:0;display:block';
+    host.appendChild(f);
+  }
+  document.addEventListener('click',function(e){
+    var h=e.target.closest('[data-video]'); if(h) play(h);
+  });
+})();
 </script>
 </body>
 </html>

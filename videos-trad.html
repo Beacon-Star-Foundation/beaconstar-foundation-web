@@ -464,7 +464,7 @@ class Component extends DCLogic {
             color: on ? '#04474F' : '#33454B',
             borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
             background: phone && on ? '#F3EFE7' : 'transparent',
-            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+            borderTop: i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)'
           });
         });
       }

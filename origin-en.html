@@ -168,7 +168,7 @@ a:hover{color:#03323A}
           <cite style="display: block; margin-top: 16px; font-family: inherit; font-style: normal; font-size: 0.85rem; font-weight: 400; color: rgb(74, 90, 95);">— Venerable Xingren Shi</cite>
         </blockquote>
         <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The Dharma is like a lighthouse on the open sea: it shows the lost their way, it gives light, it gives hope. And the small kindness and aspiration each of us carries is like a star in the night sky — seemingly insignificant, yet always shining. That was the Elder’s original intention in founding this work.</p>
-        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">After the Elder passed away, the organization was to be dissolved. Yanjing, who was administering it, asked whether I would take it on, and I gladly agreed. The Elder had spent his whole life lighting a single beacon. I kept the English name unchanged, to carry on what he left us; the Chinese name I changed to Xingxing Zhi Huo (<span lang="zh-Hant">星星之火</span>), “a single spark,” to open a new hope for what comes next.</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">After the Elder passed away, his lay disciple Yanjing asked whether I would take it on, and I gladly agreed. The Elder had spent his whole life lighting a single beacon. I kept the English name unchanged, to carry on what he left us; the Chinese name I changed to Xingxing Zhi Huo (<span lang="zh-Hant">星星之火</span>), “a single spark,” to open a new hope for what comes next.</p>
         <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">The name comes from a teaching on the four small things that must not be underestimated. In the Āgama sūtras the Buddha cautions us that four things in this world should never be taken lightly:</p>
         <ol style="list-style:none;display:flex;flex-direction:column;gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
           <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
@@ -443,7 +443,7 @@ class Component extends DCLogic {
             color: on ? '#04474F' : '#33454B',
             borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
             background: phone && on ? '#F3EFE7' : 'transparent',
-            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+            borderTop: i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)'
           });
         });
         const childOn = !!dd.querySelector('[aria-current="page"]');

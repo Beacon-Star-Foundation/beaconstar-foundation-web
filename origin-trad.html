@@ -168,7 +168,7 @@ a:hover{color:#03323A}
           <cite style="display:block;margin-top:16px;font-family:inherit;font-style:normal;font-size:.85rem;font-weight:400;color:#4A5A5F">— 性仁法師</cite>
         </blockquote>
         <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">佛法就像大海中的燈塔一樣，為人指點迷津，給人光明，給人希望。而我們每一個人微小的善心和願力，就像天上的星星一樣，雖然看起來那麼微不足道，卻永遠在那裡發光發亮。這個便是長老創辦淨業會的初心。</p>
-        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">長老往生之後，淨業會原本打算解散。負責人演淨居士問我是否願意接手，我欣然答應了。長老用盡一生，點亮了一盞名為淨業會的燈塔——我保留英文名稱沒有更改，是為了繼承長老的遺志；改中文名叫作星星之火基金會，那是為了開啟未來的新希望。</p>
+        <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">長老往生之後，其在家弟子演淨居士問我是否願意接手，我欣然答應了。長老用盡一生，點亮了一盞名為淨業會的燈塔——我保留英文名稱沒有更改，是為了繼承長老的遺志；改中文名叫作星星之火基金會，那是為了開啟未來的新希望。</p>
         <p style="font-size:1rem;line-height:1.9;text-wrap:pretty">這個名字的靈感來自佛法中「四小不可輕」的教誨。佛陀在《阿含經》中告誡我們，世間有四種東西不可輕視：</p>
         <ol style="list-style:none;display:flex;flex-direction:column;gap:1px;background:rgba(4,71,79,.14);border:1px solid rgba(4,71,79,.14)">
           <li style="background:#F3EFE7;padding:20px 24px;display:flex;gap:16px;align-items:baseline">
@@ -443,7 +443,7 @@ class Component extends DCLogic {
             color: on ? '#04474F' : '#33454B',
             borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
             background: phone && on ? '#F3EFE7' : 'transparent',
-            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+            borderTop: i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)'
           });
         });
         const childOn = !!dd.querySelector('[aria-current="page"]');

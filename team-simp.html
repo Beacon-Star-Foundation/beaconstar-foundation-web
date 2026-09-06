@@ -381,7 +381,7 @@ class Component extends DCLogic {
             /* phone: the deepest current item owns the gold marker */
             borderLeft: phone ? (on ? '4px solid #FFD12C' : '4px solid transparent') : 'none',
             background: phone && on ? '#F3EFE7' : 'transparent',
-            borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)')
+            borderTop: i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)'
           });
         });
         /* … so the parent row steps back to plain teal while a child is current */

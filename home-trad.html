@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="星星之火基金會 Beacon Star Foundation">
 <meta property="og:title" content="星星之火基金會 Beacon Star Foundation">
-<meta property="og:description" content="2003 年由宗才長老創辦，現由性仁法師接管。現階段的願力是籌辦佛教養老院，為法師和信眾提供有修行氛圍的安養處所。">
+<meta property="og:description" content="2003 年由宗才長老創辦，現由性仁法師接管。現階段的使命是籌辦佛教養老院，為法師和信眾提供有修行氛圍的安養處所。">
 <meta property="og:url" content="https://beaconstarfoundation.org/">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://beaconstarfoundation.org/og-image.png">
@@ -35,7 +35,7 @@
 <body>
 <x-dc>
 <helmet>
-<meta name="description" content="2003 年由宗才長老創辦，現由性仁法師接管。現階段的願力是籌辦佛教養老院，為法師和信眾提供有修行氛圍的安養處所。">
+<meta name="description" content="2003 年由宗才長老創辦，現由性仁法師接管。現階段的使命是籌辦佛教養老院，為法師和信眾提供有修行氛圍的安養處所。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=fallback" rel="stylesheet">
@@ -717,7 +717,7 @@ class Component extends DCLogic {
           fontSize: phone ? '.88rem' : '.88rem',
           fontWeight: '400',
           color: '#33454B',
-          borderTop: phone ? 'none' : (i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)'),
+          borderTop: i === 0 ? 'none' : '1px solid rgba(4,71,79,.12)',
           borderBottom: phone && i === 0 ? '1px solid rgba(4,71,79,.12)' : 'none'
         }));
       }
